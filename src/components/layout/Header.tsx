@@ -6,7 +6,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
-import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Menu,
@@ -67,7 +66,6 @@ export function Header() {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-slate-400">Luxury Yacht Charters Since 1989</span>
-            <LanguageSwitcher variant="dark" />
           </div>
         </div>
       </div>
@@ -141,7 +139,6 @@ export function Header() {
               </Link>
 
               <div className="hidden sm:block lg:hidden">
-                <LanguageSwitcher />
               </div>
               <Link href="/booking" className="hidden sm:block">
                 <Button variant="primary" size="md">
@@ -208,7 +205,6 @@ export function Header() {
 
             <div className="pt-4 space-y-4">
               <div className="flex justify-center">
-                <LanguageSwitcher />
               </div>
               <Link href="/booking" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button variant="primary" size="lg" className="w-full">
