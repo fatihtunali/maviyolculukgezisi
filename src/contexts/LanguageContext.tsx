@@ -135,6 +135,11 @@ const translations: { tr: Record<string, string> } = {
     "yacht.lowSeason": "Düşük Sezon",
     "yacht.midSeason": "Orta Sezon",
     "yacht.highSeason": "Yüksek Sezon",
+    "yacht.aprilMay": "Nisan - Mayıs",
+    "yacht.juneSeptember": "Haziran & Eylül",
+    "yacht.julyAugust": "Temmuz - Ağustos",
+    "yacht.october": "Ekim",
+    "yacht.perDayShort": "/gün",
 
     // Booking
     "booking.title": "Charter Rezervasyonu",
@@ -215,6 +220,9 @@ const translations: { tr: Record<string, string> } = {
     "yachtDetail.amenitiesFeatures": "Olanaklar ve Özellikler",
     "yachtDetail.startingFrom": "Başlayan fiyat",
     "yachtDetail.perWeek": "haftalık",
+    "yachtDetail.perDay": "günlük",
+    "yachtDetail.minDays": "Minimum {days} gün charter",
+    "yachtDetail.notIncluded": "Dahil değil:",
     "yachtDetail.callForQuote": "Teklif için Arayın",
     "yachtDetail.sendInquiry": "Sorgu Gönder",
     "yachtDetail.charterIncludes": "Charter şunları içerir:",
