@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import {
@@ -40,10 +40,6 @@ export default function ContactPage() {
     message: "",
   });
 
-  // Anti-spam: honeypot field and timestamp
-  const [honeypot, setHoneypot] = useState("");
-  const formLoadTime = useRef(Date.now());
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -53,26 +49,6 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
-    // Anti-spam checks
-    const timeElapsed = Date.now() - formLoadTime.current;
-    const MIN_SUBMIT_TIME = 3000; // 3 seconds minimum
-
-    // Check 1: Honeypot field should be empty (bots fill all fields)
-    if (honeypot) {
-      // Silently reject spam but show success to not alert bot
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitStatus("success");
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Check 2: Form submitted too quickly (likely bot)
-    if (timeElapsed < MIN_SUBMIT_TIME) {
-      showToast("Lütfen formu doldurmak için zaman ayırın.", "warning");
-      setIsSubmitting(false);
-      return;
-    }
 
     try {
       // Submit to API
@@ -232,20 +208,6 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Honeypot field - hidden from humans, visible to bots */}
-                  <div className="absolute -left-[9999px]" aria-hidden="true">
-                    <label htmlFor="website">Website</label>
-                    <input
-                      type="text"
-                      id="website"
-                      name="website"
-                      value={honeypot}
-                      onChange={(e) => setHoneypot(e.target.value)}
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
-                  </div>
-
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1">

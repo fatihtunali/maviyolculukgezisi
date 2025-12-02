@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { format } from "date-fns";
 import { DateRange } from "react-day-picker";
@@ -46,9 +46,6 @@ export function BookingForm({
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  // Anti-spam: honeypot field and timestamp
-  const [honeypot, setHoneypot] = useState("");
-  const formLoadTime = useRef(Date.now());
 
   const {
     register,
@@ -85,16 +82,6 @@ export function BookingForm({
 
     setIsSubmitting(true);
     setSubmitError(null);
-
-    // Anti-spam: honeypot field should be empty (bots fill it)
-    if (honeypot) {
-      // Fake success for bots
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitSuccess(true);
-      setStep(3);
-      setIsSubmitting(false);
-      return;
-    }
 
     try {
       // Submit to API
@@ -243,20 +230,6 @@ export function BookingForm({
       {/* Step 2: Customer Details */}
       {step === 2 && (
         <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-6">
-          {/* Honeypot field - hidden from humans, visible to bots */}
-          <div className="absolute -left-[9999px]" aria-hidden="true">
-            <label htmlFor="company_url">Company URL</label>
-            <input
-              type="text"
-              id="company_url"
-              name="company_url"
-              value={honeypot}
-              onChange={(e) => setHoneypot(e.target.value)}
-              tabIndex={-1}
-              autoComplete="off"
-            />
-          </div>
-
           <div className="bg-white rounded-xl shadow-lg p-6">
             <h4 className="font-semibold text-slate-800 mb-6">{t("bookingForm.guestInfo")}</h4>
 
