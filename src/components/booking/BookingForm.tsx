@@ -88,7 +88,7 @@ export function BookingForm({
 
     // Anti-spam checks
     const timeElapsed = Date.now() - formLoadTime.current;
-    const MIN_SUBMIT_TIME = 5000; // 5 seconds minimum for booking form
+    const MIN_SUBMIT_TIME = 1000; // 1 second minimum for booking form
 
     // Check 1: Honeypot field should be empty
     if (honeypot) {
