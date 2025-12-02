@@ -159,30 +159,40 @@ export function AvailabilityCalendar({
             margin-bottom: 1rem;
             background: #f8fafc;
             border-radius: 0.5rem;
+            position: relative;
+            z-index: 10;
           }
           .availability-calendar .rdp-button_previous,
           .availability-calendar .rdp-button_next {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
+            cursor: pointer !important;
             background: white;
             border: 2px solid #f59e0b;
             color: #f59e0b;
             transition: all 0.2s;
+            position: relative;
+            z-index: 20;
+            pointer-events: auto !important;
           }
           .availability-calendar .rdp-button_previous:hover,
           .availability-calendar .rdp-button_next:hover {
             background: #f59e0b;
             color: white;
+            transform: scale(1.1);
           }
           .availability-calendar .rdp-button_previous:disabled,
           .availability-calendar .rdp-button_next:disabled {
             opacity: 0.3;
-            cursor: not-allowed;
+            cursor: not-allowed !important;
+            transform: none;
+          }
+          .availability-calendar .rdp-chevron {
+            pointer-events: none;
           }
           .availability-calendar .rdp-month_grid {
             border-collapse: separate;
