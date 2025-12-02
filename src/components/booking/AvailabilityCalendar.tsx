@@ -152,30 +152,37 @@ export function AvailabilityCalendar({
             position: relative;
           }
           .availability-calendar .rdp-nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
             display: flex;
             justify-content: space-between;
-            padding: 0.75rem;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            background: #f8fafc;
+            border-radius: 0.5rem;
           }
           .availability-calendar .rdp-button_previous,
           .availability-calendar .rdp-button_next {
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
+            background: white;
+            border: 2px solid #f59e0b;
+            color: #f59e0b;
+            transition: all 0.2s;
           }
           .availability-calendar .rdp-button_previous:hover,
           .availability-calendar .rdp-button_next:hover {
-            background: #f1f5f9;
-            border-color: #cbd5e1;
+            background: #f59e0b;
+            color: white;
+          }
+          .availability-calendar .rdp-button_previous:disabled,
+          .availability-calendar .rdp-button_next:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
           }
           .availability-calendar .rdp-month_grid {
             border-collapse: separate;
@@ -268,6 +275,7 @@ export function AvailabilityCalendar({
           onSelect={handleSelect}
           numberOfMonths={4}
           weekStartsOn={6}
+          pagedNavigation
           disabled={[
             { before: minDate },
             { after: maxDate },
@@ -279,9 +287,9 @@ export function AvailabilityCalendar({
           components={{
             Chevron: ({ orientation }) =>
               orientation === "left" ? (
-                <ChevronLeft className="h-4 w-4" />
+                <ChevronLeft className="h-5 w-5" />
               ) : (
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="h-5 w-5" />
               ),
           }}
         />
