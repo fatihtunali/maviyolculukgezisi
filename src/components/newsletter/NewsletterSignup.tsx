@@ -35,22 +35,25 @@ export function NewsletterSignup({ variant = "default", className = "" }: Newsle
 
     setStatus("loading");
 
-    // Simulate API call - in production, this would connect to your email service
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
 
-      // Here you would integrate with your email service (Mailchimp, ConvertKit, etc.)
-      // const response = await fetch('/api/newsletter', {
-      //   method: 'POST',
-      //   body: JSON.stringify({ email }),
-      // });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || t("newsletter.error"));
+      }
 
       setStatus("success");
       setMessage(t("newsletter.success"));
       setEmail("");
     } catch (error) {
       setStatus("error");
-      setMessage(t("newsletter.error"));
+      setMessage(error instanceof Error ? error.message : t("newsletter.error"));
     }
   };
 
