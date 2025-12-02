@@ -81,30 +81,23 @@ export function BookingForm({
   const totalPrice = calculatePrice();
 
   const handleFormSubmit = async (data: FormData) => {
-    if (!dateRange?.from || !dateRange?.to) return;
+    console.log("[BookingForm] handleFormSubmit called", { data, dateRange });
+
+    if (!dateRange?.from || !dateRange?.to) {
+      console.log("[BookingForm] No date range, returning");
+      return;
+    }
 
     setIsSubmitting(true);
     setSubmitError(null);
 
-    // Anti-spam checks
-    const timeElapsed = Date.now() - formLoadTime.current;
-    const MIN_SUBMIT_TIME = 1000; // 1 second minimum for booking form
+    // Anti-spam checks - DISABLED FOR DEBUGGING
+    // const timeElapsed = Date.now() - formLoadTime.current;
+    // const MIN_SUBMIT_TIME = 1000;
+    // if (honeypot) { ... }
+    // if (timeElapsed < MIN_SUBMIT_TIME) { ... }
 
-    // Check 1: Honeypot field should be empty
-    if (honeypot) {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitSuccess(true);
-      setStep(3);
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Check 2: Form submitted too quickly
-    if (timeElapsed < MIN_SUBMIT_TIME) {
-      showToast("Lütfen formu doldurmak için zaman ayırın.", "warning");
-      setIsSubmitting(false);
-      return;
-    }
+    console.log("[BookingForm] Proceeding to API call");
 
     try {
       // Submit to API
@@ -129,7 +122,9 @@ export function BookingForm({
         }),
       });
 
+      console.log("[BookingForm] API response status:", response.status);
       const result = await response.json();
+      console.log("[BookingForm] API result:", result);
 
       if (!response.ok || !result.success) {
         throw new Error(result.error || "Failed to submit booking");
@@ -139,6 +134,7 @@ export function BookingForm({
       setStep(3);
       showToast(t("bookingForm.requestSubmitted"), "success");
     } catch (error) {
+      console.error("[BookingForm] Error:", error);
       setSubmitError(
         error instanceof Error ? error.message : "Failed to submit booking"
       );
