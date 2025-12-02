@@ -81,23 +81,20 @@ export function BookingForm({
   const totalPrice = calculatePrice();
 
   const handleFormSubmit = async (data: FormData) => {
-    console.log("[BookingForm] handleFormSubmit called", { data, dateRange });
-
-    if (!dateRange?.from || !dateRange?.to) {
-      console.log("[BookingForm] No date range, returning");
-      return;
-    }
+    if (!dateRange?.from || !dateRange?.to) return;
 
     setIsSubmitting(true);
     setSubmitError(null);
 
-    // Anti-spam checks - DISABLED FOR DEBUGGING
-    // const timeElapsed = Date.now() - formLoadTime.current;
-    // const MIN_SUBMIT_TIME = 1000;
-    // if (honeypot) { ... }
-    // if (timeElapsed < MIN_SUBMIT_TIME) { ... }
-
-    console.log("[BookingForm] Proceeding to API call");
+    // Anti-spam: honeypot field should be empty (bots fill it)
+    if (honeypot) {
+      // Fake success for bots
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      setSubmitSuccess(true);
+      setStep(3);
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       // Submit to API
@@ -122,9 +119,7 @@ export function BookingForm({
         }),
       });
 
-      console.log("[BookingForm] API response status:", response.status);
       const result = await response.json();
-      console.log("[BookingForm] API result:", result);
 
       if (!response.ok || !result.success) {
         throw new Error(result.error || "Failed to submit booking");
@@ -134,7 +129,6 @@ export function BookingForm({
       setStep(3);
       showToast(t("bookingForm.requestSubmitted"), "success");
     } catch (error) {
-      console.error("[BookingForm] Error:", error);
       setSubmitError(
         error instanceof Error ? error.message : "Failed to submit booking"
       );
