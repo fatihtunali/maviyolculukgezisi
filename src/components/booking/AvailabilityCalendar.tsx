@@ -120,6 +120,7 @@ export function AvailabilityCalendar({
             --rdp-cell-size: 44px;
             --rdp-accent-color: #f59e0b;
             --rdp-background-color: #fef3c7;
+            position: relative;
           }
           .availability-calendar .rdp-months {
             display: grid;
@@ -149,50 +150,42 @@ export function AvailabilityCalendar({
             font-weight: 600;
             font-size: 1rem;
             color: #1e293b;
-            position: relative;
           }
           .availability-calendar .rdp-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 1rem;
-            margin-bottom: 1rem;
-            background: #f8fafc;
-            border-radius: 0.5rem;
-            position: relative;
+            padding: 0.5rem;
             z-index: 10;
           }
           .availability-calendar .rdp-button_previous,
           .availability-calendar .rdp-button_next {
-            width: 44px;
-            height: 44px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer !important;
-            background: white;
-            border: 2px solid #f59e0b;
-            color: #f59e0b;
+            cursor: pointer;
+            background: #f59e0b;
+            border: none;
+            color: white;
             transition: all 0.2s;
-            position: relative;
             z-index: 20;
-            pointer-events: auto !important;
           }
           .availability-calendar .rdp-button_previous:hover,
           .availability-calendar .rdp-button_next:hover {
-            background: #f59e0b;
-            color: white;
+            background: #d97706;
             transform: scale(1.1);
           }
           .availability-calendar .rdp-button_previous:disabled,
           .availability-calendar .rdp-button_next:disabled {
             opacity: 0.3;
-            cursor: not-allowed !important;
+            cursor: not-allowed;
             transform: none;
-          }
-          .availability-calendar .rdp-chevron {
-            pointer-events: none;
           }
           .availability-calendar .rdp-month_grid {
             border-collapse: separate;
