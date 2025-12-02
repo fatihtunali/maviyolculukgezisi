@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { sendBookingNotificationToAdmin, sendBookingConfirmationToCustomer } from "@/lib/email";
 import type { ApiResponse, BookingSubmission } from "@/types/database";
 
 // TravelQuoteBot API Configuration
@@ -184,32 +185,32 @@ export async function POST(request: NextRequest): Promise<NextResponse<ApiRespon
       console.error(`[API] Booking ${submission.id} failed to sync to TQB:`, tqbResult.error);
     }
 
-    // TODO: Send email notification to admin
-    // await sendEmailNotification({
-    //   to: "info@maviyolculukgezisi.com",
-    //   subject: `Yeni Rezervasyon Talebi: ${body.yachtName}`,
-    //   body: `
-    //     Yeni rezervasyon talebi alındı!
-    //
-    //     Misafir: ${body.firstName} ${body.lastName}
-    //     E-posta: ${body.email}
-    //     Telefon: ${body.phone}
-    //
-    //     Yat: ${body.yachtName}
-    //     Tarihler: ${body.startDate} - ${body.endDate}
-    //     Misafir Sayısı: ${body.guests}
-    //
-    //     Özel İstekler: ${body.specialRequests || "Yok"}
-    //   `,
-    // });
+    // Send email notifications (non-blocking)
+    sendBookingNotificationToAdmin({
+      firstName: bookingData.firstName,
+      lastName: bookingData.lastName,
+      email: bookingData.email,
+      phone: bookingData.phone,
+      yachtName: bookingData.yachtName,
+      startDate: bookingData.startDate,
+      endDate: bookingData.endDate,
+      guests: bookingData.guests,
+      specialRequests: bookingData.specialRequests,
+      totalPrice: bookingData.totalPrice,
+      currency: bookingData.currency,
+    }).catch(err => console.error("[API] Failed to send admin notification:", err));
 
-    // TODO: Send confirmation email to guest
-    // await sendEmailNotification({
-    //   to: body.email,
-    //   subject: "Rezervasyon Talebiniz Alındı - Mavi Yolculuk Gezisi",
-    //   template: "booking-confirmation",
-    //   data: submission,
-    // });
+    sendBookingConfirmationToCustomer({
+      firstName: bookingData.firstName,
+      lastName: bookingData.lastName,
+      email: bookingData.email,
+      yachtName: bookingData.yachtName,
+      startDate: bookingData.startDate,
+      endDate: bookingData.endDate,
+      guests: bookingData.guests,
+      totalPrice: bookingData.totalPrice,
+      currency: bookingData.currency,
+    }).catch(err => console.error("[API] Failed to send customer confirmation:", err));
 
     return NextResponse.json(
       {

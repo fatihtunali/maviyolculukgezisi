@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { sendContactNotificationToAdmin } from "@/lib/email";
 import type { ApiResponse, ContactSubmission } from "@/types/database";
 
 // TravelQuoteBot API Configuration
@@ -124,12 +125,15 @@ export async function POST(request: NextRequest): Promise<NextResponse<ApiRespon
       console.error(`[API] Contact ${submission.id} failed to sync to TQB:`, tqbResult.error);
     }
 
-    // TODO: Send email notification to admin
-    // await sendEmailNotification({
-    //   to: "info@maviyolculukgezisi.com",
-    //   subject: `Yeni İletişim Formu: ${body.subject}`,
-    //   body: `İsim: ${body.name}\nE-posta: ${body.email}\nMesaj: ${body.message}`,
-    // });
+    // Send email notification to admin (non-blocking)
+    sendContactNotificationToAdmin({
+      name: body.name.trim(),
+      email: body.email.trim().toLowerCase(),
+      phone: body.phone?.trim(),
+      subject: body.subject,
+      yacht: body.yacht,
+      message: body.message.trim(),
+    }).catch(err => console.error("[API] Failed to send contact notification:", err));
 
     return NextResponse.json(
       {

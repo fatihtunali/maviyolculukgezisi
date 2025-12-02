@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { sendNewsletterWelcome } from "@/lib/email";
 import type { ApiResponse, NewsletterSubscription } from "@/types/database";
 
 // TravelQuoteBot API Configuration
@@ -57,6 +58,10 @@ export async function POST(request: NextRequest): Promise<NextResponse<ApiRespon
 
     // Also save to TQB as a client (non-blocking)
     saveToTravelQuoteBot(body.email.trim().toLowerCase(), ipAddress);
+
+    // Send welcome email (non-blocking)
+    sendNewsletterWelcome(body.email.trim().toLowerCase())
+      .catch(err => console.error("[API] Failed to send newsletter welcome:", err));
 
     return NextResponse.json(
       {
