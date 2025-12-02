@@ -115,8 +115,8 @@ export default function YachtPage() {
       <YachtSchema
         name={yacht.name}
         description={translatedYacht.shortDescription}
-        image={`https://www.holidayyachts.com${yacht.thumbnail}`}
-        url={`https://www.holidayyachts.com/yachts/${yacht.slug}`}
+        image={`https://www.maviyolculukgezisi.com${yacht.thumbnail}`}
+        url={`https://www.maviyolculukgezisi.com/yachts/${yacht.slug}`}
         priceFrom={yacht.pricePerDay?.aprilMay || yacht.pricePerWeek?.low || 0}
         currency={yacht.currency}
         guests={yacht.guests}
@@ -163,7 +163,7 @@ export default function YachtPage() {
           ]}
         />
         <SocialShare
-          url={`https://www.holidayyachts.com/yachts/${yacht.slug}`}
+          url={`https://www.maviyolculukgezisi.com/yachts/${yacht.slug}`}
           title={`${yacht.name} - Luxury Gulet Charter`}
           description={translatedYacht.shortDescription}
         />

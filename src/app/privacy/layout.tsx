@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Holiday Yacht",
+  title: "Gizlilik Politikası | Mavi Yolculuk Gezisi",
   description:
-    "Read Holiday Yacht's Privacy Policy. Learn how we collect, use, and protect your personal information when you use our yacht charter services.",
+    "Mavi Yolculuk Gezisi Gizlilik Politikamızı okuyun. Yat kiralama hizmetlerimizi kullandığınızda kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.",
   openGraph: {
-    title: "Privacy Policy | Holiday Yacht",
+    title: "Gizlilik Politikası | Mavi Yolculuk Gezisi",
     description:
-      "Read Holiday Yacht's Privacy Policy. Learn how we collect, use, and protect your personal information.",
+      "Mavi Yolculuk Gezisi Gizlilik Politikamızı okuyun. Kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.",
     type: "website",
   },
   robots: {

@@ -66,7 +66,7 @@ export default function YachtsPage() {
       <section className="relative h-[40vh] min-h-[300px] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/yachts/holiday10/01.jpg"
+            src="/assets/images/hero/holiday10-hero.jpg"
             alt={t("yachts.title")}
             fill
             className="object-cover"

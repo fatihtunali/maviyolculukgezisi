@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blue Cruise Itineraries | Sailing Routes Turkey",
+  title: "Mavi Yolculuk Rotaları | Türkiye Yelken Güzergahları",
   description:
-    "Discover our curated blue cruise itineraries along Turkey's Turquoise Coast. Fethiye to Olympos, Bodrum Peninsula, Greek Islands routes. 4-14 day sailing adventures with hidden coves, ancient ruins & pristine beaches.",
+    "Türkiye'nin Turkuaz Kıyısı boyunca özenle hazırlanmış mavi yolculuk rotalarımızı keşfedin. Fethiye'den Olimpos'a, Bodrum Yarımadası, Yunan Adaları rotaları. Gizli koylar, antik kalıntılar ve el değmemiş kumsallarla 4-14 günlük yelken maceraları.",
   keywords: [
-    "blue cruise itinerary",
-    "fethiye sailing route",
-    "bodrum cruise route",
-    "12 islands tour",
-    "greek islands yacht",
-    "turkey sailing routes",
-    "gocek bay cruise",
+    "mavi yolculuk rotası",
+    "fethiye yelken rotası",
+    "bodrum gezi rotası",
+    "12 ada turu",
+    "yunan adaları yat",
+    "türkiye yelken rotaları",
+    "göcek koyu gezisi",
   ],
   openGraph: {
-    title: "Blue Cruise Itineraries | Holiday Yacht Turkey",
+    title: "Mavi Yolculuk Rotaları | Mavi Yolculuk Gezisi Türkiye",
     description:
-      "Explore our carefully crafted sailing routes along Turkey's stunning coastline.",
+      "Türkiye'nin muhteşem kıyıları boyunca özenle hazırlanmış yelken rotalarımızı keşfedin.",
     images: ["/assets/images/itineraries/fethiye.jpg"],
   },
 };

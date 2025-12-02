@@ -14,7 +14,7 @@ interface BreadcrumbProps {
 }
 
 export function Breadcrumb({ items }: BreadcrumbProps) {
-  const baseUrl = "https://www.holidayyachts.com";
+  const baseUrl = "https://www.maviyolculukgezisi.com";
 
   const schemaItems = [
     { name: "Home", url: baseUrl },

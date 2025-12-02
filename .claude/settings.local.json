@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(scp:*)",
+      "Bash(ssh travelquotebot@134.209.137.11 \"sed -i ''s/formatCurrency(season.daily_rate, season.currency)/formatCurrency(season.daily_rate, season.currency || \"\"EUR\"\")/g'' ~/aipricing/app/dashboard/pricing/yachts/page.tsx && sed -i ''s/formatCurrency(season.weekly_rate, season.currency)/formatCurrency(season.weekly_rate, season.currency || \"\"EUR\"\")/g'' ~/aipricing/app/dashboard/pricing/yachts/page.tsx\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

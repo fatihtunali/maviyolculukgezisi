@@ -11,13 +11,13 @@ export default function TermsPage() {
     en: {
       title: "Terms & Conditions",
       lastUpdated: "Last updated: January 2025",
-      intro: "Welcome to Holiday Yacht. These Terms and Conditions govern your use of our website and yacht charter services. By accessing our website or making a booking, you agree to be bound by these terms. Please read them carefully.",
+      intro: "Welcome to Mavi Yolculuk Gezisi. These Terms and Conditions govern your use of our website and yacht charter services. By accessing our website or making a booking, you agree to be bound by these terms. Please read them carefully.",
       sections: [
         {
           title: "1. Definitions",
           content: `In these Terms and Conditions:
 
-• **"Company," "we," "us," "our"** refers to Holiday Yacht Charter, operated by Light Tours, Fethiye, Turkey.
+• **"Company," "we," "us," "our"** refers to Mavi Yolculuk Gezisi, operated by Light Tours, Fethiye, Turkey.
 • **"Client," "you," "your"** refers to the person making the booking and all guests included in the charter.
 • **"Charter"** refers to the yacht rental service provided by us.
 • **"Yacht"** refers to the vessel booked for the charter period.
@@ -27,7 +27,7 @@ export default function TermsPage() {
         {
           title: "2. Booking and Payment",
           content: `**2.1 Booking Process**
-• All bookings are subject to availability and confirmation by Holiday Yacht.
+• All bookings are subject to availability and confirmation by Mavi Yolculuk Gezisi.
 • A booking is confirmed only after we receive the required deposit and send written confirmation.
 • The person making the booking must be at least 18 years old and authorized to accept these terms on behalf of all guests.
 
@@ -55,7 +55,7 @@ export default function TermsPage() {
 
 **3.3 Travel Insurance**
 • We strongly recommend purchasing comprehensive travel insurance covering trip cancellation, medical emergencies, and personal belongings.
-• Holiday Yacht is not responsible for any losses not covered by insurance.`
+• Mavi Yolculuk Gezisi is not responsible for any losses not covered by insurance.`
         },
         {
           title: "4. Charter Conditions",
@@ -90,7 +90,7 @@ export default function TermsPage() {
 • Damage costs will be deducted from the security deposit or invoiced separately.
 
 **5.3 Personal Belongings**
-• Holiday Yacht is not responsible for loss, theft, or damage to personal belongings.
+• Mavi Yolculuk Gezisi is not responsible for loss, theft, or damage to personal belongings.
 • Guests are advised to secure valuables and purchase appropriate travel insurance.
 
 **5.4 Special Requirements**
@@ -119,7 +119,7 @@ export default function TermsPage() {
         {
           title: "7. Liability and Insurance",
           content: `**7.1 Company Liability**
-• Holiday Yacht maintains comprehensive marine insurance for all vessels.
+• Mavi Yolculuk Gezisi maintains comprehensive marine insurance for all vessels.
 • Our liability is limited to the charter fee paid. We are not liable for:
   - Indirect or consequential losses
   - Personal injury except where caused by our negligence
@@ -163,7 +163,7 @@ export default function TermsPage() {
         {
           title: "10. Website Use",
           content: `**10.1 Intellectual Property**
-• All content on this website, including text, images, and logos, is owned by Holiday Yacht or its licensors.
+• All content on this website, including text, images, and logos, is owned by Mavi Yolculuk Gezisi or its licensors.
 • You may not reproduce, distribute, or use our content without written permission.
 
 **10.2 Accuracy of Information**
@@ -186,10 +186,10 @@ export default function TermsPage() {
           title: "12. Contact Information",
           content: `For questions about these Terms and Conditions or your booking, please contact us:
 
-**Holiday Yacht Charter**
+**Mavi Yolculuk Gezisi**
 Operated by: Light Tours
 Address: Fethiye Marina, Muğla, Turkey
-Email: info@holidayyachts.com
+Email: info@maviyolculukgezisi.com
 Phone: +90 252 614 47 57
 TURSAB License: A-1234
 
@@ -200,13 +200,13 @@ Office Hours: Monday - Saturday, 09:00 - 18:00 (Turkey Time)`
     tr: {
       title: "Şartlar ve Koşullar",
       lastUpdated: "Son güncelleme: Ocak 2025",
-      intro: "Holiday Yacht'a hoş geldiniz. Bu Şartlar ve Koşullar, web sitemizi ve yat kiralama hizmetlerimizi kullanımınızı düzenler. Web sitemize erişerek veya rezervasyon yaparak bu şartlara bağlı olmayı kabul etmiş olursunuz. Lütfen bunları dikkatlice okuyun.",
+      intro: "Mavi Yolculuk Gezisi'ne hoş geldiniz. Bu Şartlar ve Koşullar, web sitemizi ve yat kiralama hizmetlerimizi kullanımınızı düzenler. Web sitemize erişerek veya rezervasyon yaparak bu şartlara bağlı olmayı kabul etmiş olursunuz. Lütfen bunları dikkatlice okuyun.",
       sections: [
         {
           title: "1. Tanımlar",
           content: `Bu Şartlar ve Koşullarda:
 
-• **"Şirket," "biz," "bizim"** Holiday Yacht Charter, Light Tours tarafından işletilen, Fethiye, Türkiye'yi ifade eder.
+• **"Şirket," "biz," "bizim"** Mavi Yolculuk Gezisi, Light Tours tarafından işletilen, Fethiye, Türkiye'yi ifade eder.
 • **"Müşteri," "siz," "sizin"** rezervasyonu yapan kişi ve kiralama dahil tüm misafirleri ifade eder.
 • **"Kiralama"** tarafımızca sağlanan yat kiralama hizmetini ifade eder.
 • **"Yat"** kiralama dönemi için rezerve edilen tekneyi ifade eder.
@@ -216,7 +216,7 @@ Office Hours: Monday - Saturday, 09:00 - 18:00 (Turkey Time)`
         {
           title: "2. Rezervasyon ve Ödeme",
           content: `**2.1 Rezervasyon Süreci**
-• Tüm rezervasyonlar müsaitliğe ve Holiday Yacht tarafından onaya tabidir.
+• Tüm rezervasyonlar müsaitliğe ve Mavi Yolculuk Gezisi tarafından onaya tabidir.
 • Bir rezervasyon, yalnızca gerekli depozitoyu aldıktan ve yazılı onay gönderdikten sonra onaylanır.
 • Rezervasyonu yapan kişi en az 18 yaşında olmalı ve tüm misafirler adına bu şartları kabul etme yetkisine sahip olmalıdır.
 
@@ -244,7 +244,7 @@ Office Hours: Monday - Saturday, 09:00 - 18:00 (Turkey Time)`
 
 **3.3 Seyahat Sigortası**
 • Seyahat iptali, tıbbi acil durumlar ve kişisel eşyaları kapsayan kapsamlı seyahat sigortası satın almanızı şiddetle tavsiye ederiz.
-• Holiday Yacht, sigorta kapsamında olmayan kayıplardan sorumlu değildir.`
+• Mavi Yolculuk Gezisi, sigorta kapsamında olmayan kayıplardan sorumlu değildir.`
         },
         {
           title: "4. Kiralama Koşulları",
@@ -279,7 +279,7 @@ Office Hours: Monday - Saturday, 09:00 - 18:00 (Turkey Time)`
 • Hasar maliyetleri güvenlik depozitosundan düşülecek veya ayrıca faturalandırılacaktır.
 
 **5.3 Kişisel Eşyalar**
-• Holiday Yacht, kişisel eşyaların kaybı, çalınması veya hasarından sorumlu değildir.
+• Mavi Yolculuk Gezisi, kişisel eşyaların kaybı, çalınması veya hasarından sorumlu değildir.
 • Misafirlerin değerli eşyalarını güvence altına almaları ve uygun seyahat sigortası satın almaları önerilir.
 
 **5.4 Özel Gereksinimler**
@@ -308,7 +308,7 @@ Office Hours: Monday - Saturday, 09:00 - 18:00 (Turkey Time)`
         {
           title: "7. Sorumluluk ve Sigorta",
           content: `**7.1 Şirket Sorumluluğu**
-• Holiday Yacht, tüm tekneler için kapsamlı deniz sigortası sağlar.
+• Mavi Yolculuk Gezisi, tüm tekneler için kapsamlı deniz sigortası sağlar.
 • Sorumluluğumuz ödenen kiralama ücreti ile sınırlıdır. Şunlardan sorumlu değiliz:
   - Dolaylı veya sonuç olarak ortaya çıkan kayıplar
   - İhmalimizden kaynaklanmayan kişisel yaralanmalar
@@ -352,7 +352,7 @@ Office Hours: Monday - Saturday, 09:00 - 18:00 (Turkey Time)`
         {
           title: "10. Web Sitesi Kullanımı",
           content: `**10.1 Fikri Mülkiyet**
-• Bu web sitesindeki metin, resimler ve logolar dahil tüm içerik Holiday Yacht veya lisans verenlerine aittir.
+• Bu web sitesindeki metin, resimler ve logolar dahil tüm içerik Mavi Yolculuk Gezisi veya lisans verenlerine aittir.
 • İçeriğimizi yazılı izin olmadan çoğaltamaz, dağıtamaz veya kullanamazsınız.
 
 **10.2 Bilgi Doğruluğu**
@@ -375,10 +375,10 @@ Office Hours: Monday - Saturday, 09:00 - 18:00 (Turkey Time)`
           title: "12. İletişim Bilgileri",
           content: `Bu Şartlar ve Koşullar veya rezervasyonunuz hakkında sorularınız için lütfen bizimle iletişime geçin:
 
-**Holiday Yacht Charter**
+**Mavi Yolculuk Gezisi**
 İşleten: Light Tours
 Adres: Fethiye Marina, Muğla, Türkiye
-E-posta: info@holidayyachts.com
+E-posta: info@maviyolculukgezisi.com
 Telefon: +90 252 614 47 57
 TURSAB Lisansı: A-1234
 
@@ -389,13 +389,13 @@ TURSAB Lisansı: A-1234
     de: {
       title: "Allgemeine Geschäftsbedingungen",
       lastUpdated: "Zuletzt aktualisiert: Januar 2025",
-      intro: "Willkommen bei Holiday Yacht. Diese Allgemeinen Geschäftsbedingungen regeln Ihre Nutzung unserer Website und Yachtcharter-Dienste. Durch den Zugriff auf unsere Website oder eine Buchung erklären Sie sich mit diesen Bedingungen einverstanden. Bitte lesen Sie sie sorgfältig durch.",
+      intro: "Willkommen bei Mavi Yolculuk Gezisi. Diese Allgemeinen Geschäftsbedingungen regeln Ihre Nutzung unserer Website und Yachtcharter-Dienste. Durch den Zugriff auf unsere Website oder eine Buchung erklären Sie sich mit diesen Bedingungen einverstanden. Bitte lesen Sie sie sorgfältig durch.",
       sections: [
         {
           title: "1. Definitionen",
           content: `In diesen Allgemeinen Geschäftsbedingungen:
 
-• **"Unternehmen," "wir," "uns," "unser"** bezieht sich auf Holiday Yacht Charter, betrieben von Light Tours, Fethiye, Türkei.
+• **"Unternehmen," "wir," "uns," "unser"** bezieht sich auf Mavi Yolculuk Gezisi, betrieben von Light Tours, Fethiye, Türkei.
 • **"Kunde," "Sie," "Ihr"** bezieht sich auf die Person, die die Buchung vornimmt, und alle im Charter enthaltenen Gäste.
 • **"Charter"** bezieht sich auf den von uns erbrachten Yachtverleih-Service.
 • **"Yacht"** bezieht sich auf das für den Charterzeitraum gebuchte Schiff.
@@ -405,7 +405,7 @@ TURSAB Lisansı: A-1234
         {
           title: "2. Buchung und Zahlung",
           content: `**2.1 Buchungsprozess**
-• Alle Buchungen unterliegen der Verfügbarkeit und Bestätigung durch Holiday Yacht.
+• Alle Buchungen unterliegen der Verfügbarkeit und Bestätigung durch Mavi Yolculuk Gezisi.
 • Eine Buchung ist erst nach Erhalt der erforderlichen Anzahlung und Versand einer schriftlichen Bestätigung bestätigt.
 • Die buchende Person muss mindestens 18 Jahre alt sein und berechtigt sein, diese Bedingungen im Namen aller Gäste zu akzeptieren.
 
@@ -433,7 +433,7 @@ TURSAB Lisansı: A-1234
 
 **3.3 Reiseversicherung**
 • Wir empfehlen dringend den Abschluss einer umfassenden Reiseversicherung, die Reiserücktritt, medizinische Notfälle und persönliche Gegenstände abdeckt.
-• Holiday Yacht ist nicht verantwortlich für Verluste, die nicht von der Versicherung gedeckt sind.`
+• Mavi Yolculuk Gezisi ist nicht verantwortlich für Verluste, die nicht von der Versicherung gedeckt sind.`
         },
         {
           title: "4. Charterbedingungen",
@@ -468,7 +468,7 @@ TURSAB Lisansı: A-1234
 • Schadenskosten werden von der Kaution abgezogen oder separat in Rechnung gestellt.
 
 **5.3 Persönliche Gegenstände**
-• Holiday Yacht ist nicht verantwortlich für Verlust, Diebstahl oder Beschädigung persönlicher Gegenstände.
+• Mavi Yolculuk Gezisi ist nicht verantwortlich für Verlust, Diebstahl oder Beschädigung persönlicher Gegenstände.
 • Gästen wird empfohlen, Wertsachen zu sichern und eine angemessene Reiseversicherung abzuschließen.
 
 **5.4 Besondere Anforderungen**
@@ -497,7 +497,7 @@ TURSAB Lisansı: A-1234
         {
           title: "7. Haftung und Versicherung",
           content: `**7.1 Unternehmenshaftung**
-• Holiday Yacht unterhält eine umfassende Schiffsversicherung für alle Schiffe.
+• Mavi Yolculuk Gezisi unterhält eine umfassende Schiffsversicherung für alle Schiffe.
 • Unsere Haftung ist auf die gezahlte Chartergebühr beschränkt. Wir haften nicht für:
   - Indirekte oder Folgeschäden
   - Personenschäden, außer wenn durch unsere Fahrlässigkeit verursacht
@@ -541,7 +541,7 @@ TURSAB Lisansı: A-1234
         {
           title: "10. Website-Nutzung",
           content: `**10.1 Geistiges Eigentum**
-• Alle Inhalte auf dieser Website, einschließlich Text, Bilder und Logos, sind Eigentum von Holiday Yacht oder seinen Lizenzgebern.
+• Alle Inhalte auf dieser Website, einschließlich Text, Bilder und Logos, sind Eigentum von Mavi Yolculuk Gezisi oder seinen Lizenzgebern.
 • Sie dürfen unsere Inhalte nicht ohne schriftliche Genehmigung vervielfältigen, verbreiten oder verwenden.
 
 **10.2 Genauigkeit der Informationen**
@@ -564,10 +564,10 @@ TURSAB Lisansı: A-1234
           title: "12. Kontaktinformationen",
           content: `Bei Fragen zu diesen Allgemeinen Geschäftsbedingungen oder Ihrer Buchung kontaktieren Sie uns bitte:
 
-**Holiday Yacht Charter**
+**Mavi Yolculuk Gezisi**
 Betrieben von: Light Tours
 Adresse: Fethiye Marina, Muğla, Türkei
-E-Mail: info@holidayyachts.com
+E-Mail: info@maviyolculukgezisi.com
 Telefon: +90 252 614 47 57
 TURSAB-Lizenz: A-1234
 
@@ -644,11 +644,11 @@ Geschäftszeiten: Montag - Samstag, 09:00 - 18:00 (Türkei-Zeit)`
               </h3>
               <div className="flex flex-wrap gap-6">
                 <a
-                  href="mailto:info@holidayyachts.com"
+                  href="mailto:info@maviyolculukgezisi.com"
                   className="flex items-center gap-2 text-amber-600 hover:text-amber-700"
                 >
                   <Mail className="h-5 w-5" />
-                  info@holidayyachts.com
+                  info@maviyolculukgezisi.com
                 </a>
                 <a
                   href="tel:+902526144757"

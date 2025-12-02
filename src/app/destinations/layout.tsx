@@ -1,48 +1,46 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sailing Destinations | Turquoise Coast Harbors | Holiday Yacht",
+  title: "Yelken Destinasyonları | Turkuaz Kıyısı Limanları | Mavi Yolculuk Gezisi",
   description:
-    "Discover Turkey's stunning sailing destinations including Fethiye, Gocek, Marmaris, Bodrum, and Kekova. Explore the Turquoise Coast for your dream blue cruise.",
+    "Fethiye, Göcek, Marmaris, Bodrum ve Kekova dahil Türkiye'nin muhteşem yelken destinasyonlarını keşfedin. Hayalinizdeki mavi yolculuk için Turkuaz Kıyısı'nı keşfedin.",
   keywords: [
-    "Turkey sailing destinations",
-    "Turquoise Coast harbors",
-    "Fethiye yacht charter",
-    "Gocek marina",
-    "Marmaris sailing",
-    "Bodrum yacht",
-    "Kekova sunken city",
-    "Turkish Riviera destinations",
-    "Mediterranean sailing spots",
-    "Blue cruise destinations",
+    "türkiye yelken destinasyonları",
+    "turkuaz kıyısı limanları",
+    "fethiye yat kiralama",
+    "göcek marina",
+    "marmaris yelken",
+    "bodrum yat",
+    "kekova batık şehir",
+    "türk rivierası destinasyonları",
+    "akdeniz yelken noktaları",
+    "mavi yolculuk destinasyonları",
   ],
   openGraph: {
-    title: "Sailing Destinations | Turquoise Coast Harbors | Holiday Yacht",
+    title: "Yelken Destinasyonları | Turkuaz Kıyısı Limanları | Mavi Yolculuk Gezisi",
     description:
-      "Discover Turkey's stunning sailing destinations including Fethiye, Gocek, Marmaris, Bodrum, and Kekova for your dream blue cruise.",
+      "Hayalinizdeki mavi yolculuk için Fethiye, Göcek, Marmaris, Bodrum ve Kekova dahil Türkiye'nin muhteşem yelken destinasyonlarını keşfedin.",
     type: "website",
-    locale: "en_US",
-    siteName: "Holiday Yacht",
+    locale: "tr_TR",
+    siteName: "Mavi Yolculuk Gezisi",
     images: [
       {
         url: "/assets/images/itineraries/fethiye.jpg",
         width: 1200,
         height: 630,
-        alt: "Turkish Coast Sailing Destinations",
+        alt: "Türk Kıyısı Yelken Destinasyonları",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sailing Destinations | Turquoise Coast Harbors | Holiday Yacht",
+    title: "Yelken Destinasyonları | Turkuaz Kıyısı Limanları | Mavi Yolculuk Gezisi",
     description:
-      "Discover Turkey's stunning sailing destinations for your dream blue cruise.",
+      "Hayalinizdeki mavi yolculuk için Türkiye'nin muhteşem yelken destinasyonlarını keşfedin.",
   },
   alternates: {
     languages: {
-      "en-US": "/destinations",
       "tr-TR": "/destinations",
-      "de-DE": "/destinations",
     },
   },
 };

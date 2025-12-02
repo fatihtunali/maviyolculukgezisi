@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Book Your Yacht Charter",
+  title: "İletişim | Yat Kiralamanızı Rezerve Edin",
   description:
-    "Contact Holiday Yacht for your luxury gulet charter in Turkey. Get a free quote, check availability, or ask questions. Phone: +90 252 614 4757. Based in Fethiye Marina. We speak English, Turkish & German.",
+    "Türkiye'de lüks gulet kiralama için Mavi Yolculuk Gezisi ile iletişime geçin. Ücretsiz teklif alın, müsaitlik kontrolü yapın veya sorularınızı sorun. Telefon: +90 252 614 4757. Fethiye Marina merkezli. Türkçe, İngilizce ve Almanca konuşuyoruz.",
   keywords: [
-    "contact yacht charter turkey",
-    "book gulet fethiye",
-    "yacht rental inquiry",
-    "blue cruise booking",
-    "fethiye marina yacht",
+    "türkiye yat kiralama iletişim",
+    "fethiye gulet kiralama",
+    "yat kiralama sorgu",
+    "mavi yolculuk rezervasyon",
+    "fethiye marina yat",
   ],
   openGraph: {
-    title: "Contact Holiday Yacht | Get Your Free Quote",
+    title: "Mavi Yolculuk Gezisi İletişim | Ücretsiz Teklif Alın",
     description:
-      "Reach out for availability, pricing, and custom itinerary requests.",
+      "Müsaitlik, fiyatlandırma ve özel rota talepleri için bize ulaşın.",
     images: ["/assets/images/og-image.jpg"],
   },
 };

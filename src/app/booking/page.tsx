@@ -69,7 +69,7 @@ function BookingContent() {
       <section className="relative h-[30vh] min-h-[250px] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/hero/py.jpg"
+            src="/assets/images/hero/holiday10-hero.jpg"
             alt={t("booking.title")}
             fill
             className="object-cover"

@@ -67,7 +67,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/about/about-h4.jpg"
+            src="/assets/images/hero/holiday10-hero.jpg"
             alt={t("about.title")}
             fill
             className="object-cover"

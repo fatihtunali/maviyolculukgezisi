@@ -44,7 +44,7 @@ export default function BlogPage() {
         <div className="absolute inset-0">
           <Image
             src="/assets/images/hero/holiday10-hero.jpg"
-            alt="Holiday Yacht Blog"
+            alt="Mavi Yolculuk Gezisi Blog"
             fill
             className="object-cover"
             priority

@@ -69,7 +69,7 @@ export default function ContactPage() {
 
     // Check 2: Form submitted too quickly (likely bot)
     if (timeElapsed < MIN_SUBMIT_TIME) {
-      showToast("Please take your time filling out the form.", "warning");
+      showToast("Lütfen formu doldurmak için zaman ayırın.", "warning");
       setIsSubmitting(false);
       return;
     }
@@ -124,8 +124,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       titleKey: "contact.email",
-      content: ["info@holidayyachts.com"],
-      link: "mailto:info@holidayyachts.com",
+      content: ["info@maviyolculukgezisi.com"],
+      link: "mailto:info@maviyolculukgezisi.com",
     },
     {
       icon: MapPin,
@@ -138,7 +138,7 @@ export default function ContactPage() {
     {
       icon: Clock,
       titleKey: "contact.workingHours",
-      content: [t("footer.workingHours"), "Sunday: Closed"],
+      content: [t("footer.workingHours"), "Pazar: Kapalı"],
     },
   ];
 
@@ -148,7 +148,7 @@ export default function ContactPage() {
       <section className="relative h-[40vh] min-h-[300px] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/hero/py.jpg"
+            src="/assets/images/hero/holiday10-hero.jpg"
             alt={t("contact.title")}
             fill
             className="object-cover"
@@ -361,8 +361,8 @@ export default function ContactPage() {
                     <div className="flex items-center gap-2 p-4 bg-red-50 text-red-700 rounded-lg">
                       <AlertCircle className="h-5 w-5" />
                       <span>
-                        Failed to send message. Please try again or email us
-                        directly.
+                        Mesaj gönderilemedi. Lütfen tekrar deneyin veya doğrudan
+                        e-posta gönderin.
                       </span>
                     </div>
                   )}
@@ -393,7 +393,7 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Holiday Yacht Location"
+                  title="Mavi Yolculuk Gezisi Konum"
                 />
               </div>
 

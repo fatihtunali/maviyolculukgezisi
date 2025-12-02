@@ -30,70 +30,82 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.holidayyachts.com"),
+  metadataBase: new URL("https://www.maviyolculukgezisi.com"),
   title: {
-    default: "Holiday Yacht | Luxury Gulet Charter in Turkey | Blue Cruise Fethiye",
-    template: "%s | Holiday Yacht Turkey",
+    default: "Mavi Yolculuk Gezisi | Türkiye Lüks Gulet Kiralama | Mavi Yolculuk Fethiye",
+    template: "%s | Mavi Yolculuk Gezisi Türkiye",
   },
   description:
-    "Experience the ultimate luxury gulet charter along Turkey's stunning Turquoise Coast. Premium yacht rentals with professional crew, gourmet cuisine & water sports. Blue cruise from Fethiye, Bodrum, Marmaris. Book your dream sailing holiday today!",
+    "Türkiye'nin muhteşem Turkuaz Kıyısı boyunca nihai lüks gulet kiralama deneyimini yaşayın. Profesyonel mürettebat, gurme mutfak ve su sporları ile premium yat kiralama. Fethiye, Bodrum, Marmaris'ten mavi yolculuk. Hayalinizdeki yelken tatilini bugün rezerve edin!",
   keywords: [
-    "yacht charter turkey",
-    "gulet rental turkey",
-    "blue cruise turkey",
-    "luxury boat charter fethiye",
-    "fethiye yacht charter",
-    "turkish riviera cruise",
-    "mediterranean sailing holiday",
-    "gulet cruise bodrum",
-    "marmaris yacht rental",
-    "private yacht charter turkey",
-    "sailing turkey",
-    "blue voyage turkey",
-    "cabin charter turkey",
-    "luxury gulet holiday",
-    "turkish coast sailing",
+    "türkiye yat kiralama",
+    "gulet kiralama türkiye",
+    "mavi yolculuk türkiye",
+    "fethiye lüks tekne kiralama",
+    "fethiye yat kiralama",
+    "türk rivierası gezisi",
+    "akdeniz yelken tatili",
+    "bodrum gulet gezisi",
+    "marmaris yat kiralama",
+    "özel yat kiralama türkiye",
+    "türkiye yelken",
+    "mavi yolculuk",
+    "kabin kiralama türkiye",
+    "lüks gulet tatili",
+    "türk kıyısı yelken",
   ],
-  authors: [{ name: "Holiday Yacht", url: "https://www.holidayyachts.com" }],
-  creator: "Holiday Yacht",
-  publisher: "Holiday Yacht",
+  authors: [{ name: "Mavi Yolculuk Gezisi", url: "https://www.maviyolculukgezisi.com" }],
+  creator: "Mavi Yolculuk Gezisi",
+  publisher: "Mavi Yolculuk Gezisi",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   alternates: {
-    canonical: "https://www.holidayyachts.com",
+    canonical: "https://www.maviyolculukgezisi.com",
     languages: {
-      "en-US": "https://www.holidayyachts.com",
-      "tr-TR": "https://www.holidayyachts.com/tr",
+      "tr-TR": "https://www.maviyolculukgezisi.com",
     },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/images/logo/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/assets/images/logo/favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/assets/images/logo/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "android-chrome-192x192", url: "/assets/images/logo/android-chrome-192.png" },
+      { rel: "android-chrome-512x512", url: "/assets/images/logo/android-chrome-512.png" },
+    ],
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    alternateLocale: ["tr_TR"],
-    url: "https://www.holidayyachts.com",
-    siteName: "Holiday Yacht",
-    title: "Holiday Yacht | Luxury Gulet Charter in Turkey",
+    locale: "tr_TR",
+    url: "https://www.maviyolculukgezisi.com",
+    siteName: "Mavi Yolculuk Gezisi",
+    title: "Mavi Yolculuk Gezisi | Türkiye Lüks Gulet Kiralama",
     description:
-      "Experience the ultimate luxury gulet charter along Turkey's stunning Turquoise Coast. Premium yacht rentals with professional crew since 1989.",
+      "Türkiye'nin muhteşem Turkuaz Kıyısı boyunca nihai lüks gulet kiralama deneyimini yaşayın. 1989'dan beri profesyonel mürettebat ile premium yat kiralama.",
     images: [
       {
-        url: "/assets/images/og-image.jpg",
+        url: "/assets/images/og-image-new.jpg",
         width: 1200,
         height: 630,
-        alt: "Holiday Yacht - Luxury Gulet Charter in Turkey",
+        alt: "Mavi Yolculuk Gezisi - Türkiye Lüks Gulet Kiralama",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Holiday Yacht | Luxury Gulet Charter in Turkey",
+    title: "Mavi Yolculuk Gezisi | Türkiye Lüks Gulet Kiralama",
     description:
-      "Experience the ultimate luxury gulet charter along Turkey's stunning Turquoise Coast. Book your dream sailing holiday!",
-    images: ["/assets/images/og-image.jpg"],
-    creator: "@holidayyacht",
+      "Türkiye'nin muhteşem Turkuaz Kıyısı boyunca nihai lüks gulet kiralama deneyimini yaşayın. Hayalinizdeki yelken tatilini rezerve edin!",
+    images: ["/assets/images/og-image-new.jpg"],
+    creator: "@maviyolculukgezisi",
   },
   robots: {
     index: true,
@@ -121,7 +133,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="tr" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <OrganizationSchema />
         <LocalBusinessSchema />
@@ -134,7 +146,7 @@ export default function RootLayout({
             href="#main-content"
             className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-amber-500 focus:text-white focus:rounded-md focus:outline-none"
           >
-            Skip to main content
+            Ana içeriğe geç
           </a>
           <Header />
           <main id="main-content" className="min-h-screen" role="main">

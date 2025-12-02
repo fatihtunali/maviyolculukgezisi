@@ -2,21 +2,89 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import type { ApiResponse, BookingSubmission } from "@/types/database";
 
+// TravelQuoteBot API Configuration
+const TQB_API_URL = process.env.TQB_API_URL || "http://134.209.137.11:3004";
+const TQB_API_KEY = process.env.TQB_API_KEY || "myg_live_sk_7f8a9b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a";
+
+// Send booking to TravelQuoteBot
+async function sendToTravelQuoteBot(bookingData: {
+  yachtId: string;
+  yachtName: string;
+  startDate: string;
+  endDate: string;
+  nights: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  country: string;
+  guests: number;
+  specialRequests?: string;
+  totalPrice?: number;
+  currency: string;
+  ipAddress: string;
+}): Promise<{ success: boolean; quoteId?: number; quoteNumber?: string; error?: string }> {
+  try {
+    const response = await fetch(`${TQB_API_URL}/api/external/yacht-quote`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-API-Key": TQB_API_KEY,
+      },
+      body: JSON.stringify({
+        yacht_slug: bookingData.yachtId,
+        yacht_name: bookingData.yachtName,
+        start_date: bookingData.startDate,
+        end_date: bookingData.endDate,
+        nights: bookingData.nights,
+        customer_name: `${bookingData.firstName} ${bookingData.lastName}`,
+        customer_email: bookingData.email,
+        customer_phone: bookingData.phone,
+        customer_country: bookingData.country,
+        guests: bookingData.guests,
+        special_requests: bookingData.specialRequests,
+        total_price: bookingData.totalPrice,
+        currency: bookingData.currency,
+        source_url: "https://maviyolculukgezisi.com",
+        ip_address: bookingData.ipAddress,
+        language: "tr",
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      console.log(`[TQB] Quote created: ${result.data.quote_number}`);
+      return {
+        success: true,
+        quoteId: result.data.quote_id,
+        quoteNumber: result.data.quote_number,
+      };
+    } else {
+      console.error("[TQB] Failed to create quote:", result.error);
+      return { success: false, error: result.error };
+    }
+  } catch (error) {
+    console.error("[TQB] API error:", error);
+    return { success: false, error: "TravelQuoteBot API unavailable" };
+  }
+}
+
 // Validation helper
 function validateBookingData(data: Record<string, unknown>): { valid: boolean; errors: string[] } {
   const errors: string[] = [];
 
   // Yacht info
   if (!data.yachtId || typeof data.yachtId !== "string") {
-    errors.push("Yacht selection is required");
+    errors.push("Yat seçimi gereklidir");
   }
 
   // Date validation
   if (!data.startDate || typeof data.startDate !== "string") {
-    errors.push("Start date is required");
+    errors.push("Başlangıç tarihi gereklidir");
   }
   if (!data.endDate || typeof data.endDate !== "string") {
-    errors.push("End date is required");
+    errors.push("Bitiş tarihi gereklidir");
   }
 
   // Check date order
@@ -24,35 +92,35 @@ function validateBookingData(data: Record<string, unknown>): { valid: boolean; e
     const start = new Date(data.startDate as string);
     const end = new Date(data.endDate as string);
     if (end <= start) {
-      errors.push("End date must be after start date");
+      errors.push("Bitiş tarihi başlangıç tarihinden sonra olmalıdır");
     }
     // Check minimum nights (7)
     const nights = Math.round((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
     if (nights < 7) {
-      errors.push("Minimum booking is 7 nights");
+      errors.push("Minimum rezervasyon 7 gecedir");
     }
   }
 
   // Guest info
   if (!data.firstName || typeof data.firstName !== "string" || data.firstName.trim().length < 2) {
-    errors.push("First name is required");
+    errors.push("Ad gereklidir");
   }
   if (!data.lastName || typeof data.lastName !== "string" || data.lastName.trim().length < 2) {
-    errors.push("Last name is required");
+    errors.push("Soyad gereklidir");
   }
   if (!data.email || typeof data.email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.push("Valid email is required");
+    errors.push("Geçerli bir e-posta adresi gereklidir");
   }
   if (!data.phone || typeof data.phone !== "string") {
-    errors.push("Phone number is required");
+    errors.push("Telefon numarası gereklidir");
   }
   if (!data.country || typeof data.country !== "string") {
-    errors.push("Country is required");
+    errors.push("Ülke gereklidir");
   }
 
   // Guests
   if (!data.guests || typeof data.guests !== "number" || data.guests < 1) {
-    errors.push("Number of guests is required");
+    errors.push("Misafir sayısı gereklidir");
   }
 
   return { valid: errors.length === 0, errors };
@@ -80,8 +148,8 @@ export async function POST(request: NextRequest): Promise<NextResponse<ApiRespon
     const ipAddress = request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "unknown";
     const userAgent = request.headers.get("user-agent") || undefined;
 
-    // Create submission
-    const submission = await db.createBookingSubmission({
+    // Prepare booking data
+    const bookingData = {
       yachtId: body.yachtId,
       yachtName: body.yachtName || body.yachtId,
       startDate: body.startDate,
@@ -96,35 +164,49 @@ export async function POST(request: NextRequest): Promise<NextResponse<ApiRespon
       specialRequests: body.specialRequests?.trim() || undefined,
       totalPrice: body.totalPrice || undefined,
       currency: body.currency || "EUR",
-      status: "pending",
       ipAddress,
+    };
+
+    // 1. Save to local MySQL database (backup)
+    const submission = await db.createBookingSubmission({
+      ...bookingData,
+      status: "pending",
       userAgent,
-      language: body.language || "en",
+      language: body.language || "tr",
     });
+
+    // 2. Send to TravelQuoteBot for management
+    const tqbResult = await sendToTravelQuoteBot(bookingData);
+    if (tqbResult.success) {
+      console.log(`[API] Booking ${submission.id} synced to TQB as ${tqbResult.quoteNumber}`);
+    } else {
+      // Log error but don't fail the request - local save succeeded
+      console.error(`[API] Booking ${submission.id} failed to sync to TQB:`, tqbResult.error);
+    }
 
     // TODO: Send email notification to admin
     // await sendEmailNotification({
-    //   to: "bookings@holidayyachts.com",
-    //   subject: `New Booking Request: ${body.yachtName}`,
+    //   to: "info@maviyolculukgezisi.com",
+    //   subject: `Yeni Rezervasyon Talebi: ${body.yachtName}`,
     //   body: `
-    //     New booking request received!
+    //     Yeni rezervasyon talebi alındı!
     //
-    //     Guest: ${body.firstName} ${body.lastName}
-    //     Email: ${body.email}
-    //     Phone: ${body.phone}
+    //     Misafir: ${body.firstName} ${body.lastName}
+    //     E-posta: ${body.email}
+    //     Telefon: ${body.phone}
     //
-    //     Yacht: ${body.yachtName}
-    //     Dates: ${body.startDate} - ${body.endDate}
-    //     Guests: ${body.guests}
+    //     Yat: ${body.yachtName}
+    //     Tarihler: ${body.startDate} - ${body.endDate}
+    //     Misafir Sayısı: ${body.guests}
     //
-    //     Special Requests: ${body.specialRequests || "None"}
+    //     Özel İstekler: ${body.specialRequests || "Yok"}
     //   `,
     // });
 
     // TODO: Send confirmation email to guest
     // await sendEmailNotification({
     //   to: body.email,
-    //   subject: "Booking Request Received - Holiday Yacht",
+    //   subject: "Rezervasyon Talebiniz Alındı - Mavi Yolculuk Gezisi",
     //   template: "booking-confirmation",
     //   data: submission,
     // });
@@ -133,14 +215,14 @@ export async function POST(request: NextRequest): Promise<NextResponse<ApiRespon
       {
         success: true,
         data: submission,
-        message: "Your booking request has been submitted successfully. We will contact you within 24 hours!",
+        message: "Rezervasyon talebiniz başarıyla gönderildi. 24 saat içinde sizinle iletişime geçeceğiz!",
       },
       { status: 201 }
     );
   } catch (error) {
     console.error("[API] Booking form error:", error);
     return NextResponse.json(
-      { success: false, error: "Failed to submit booking. Please try again." },
+      { success: false, error: "Rezervasyon gönderilemedi. Lütfen tekrar deneyin." },
       { status: 500 }
     );
   }
@@ -165,7 +247,7 @@ export async function GET(request: NextRequest): Promise<NextResponse<ApiRespons
   } catch (error) {
     console.error("[API] Get bookings error:", error);
     return NextResponse.json(
-      { success: false, error: "Failed to fetch bookings" },
+      { success: false, error: "Rezervasyonlar alınamadı" },
       { status: 500 }
     );
   }

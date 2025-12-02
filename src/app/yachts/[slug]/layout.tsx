@@ -11,23 +11,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!yacht) {
     return {
-      title: "Yacht Not Found",
+      title: "Yat Bulunamadı",
     };
   }
 
   return {
-    title: `${yacht.name} | ${yacht.length}m Gulet Charter`,
-    description: `Charter ${yacht.name}, a luxurious ${yacht.length}m gulet with ${yacht.cabins} cabins for ${yacht.guests} guests. ${yacht.shortDescription} Professional crew, all-inclusive. From €${yacht.pricePerDay?.aprilMay || yacht.pricePerWeek?.low || 0}${yacht.pricePerDay ? '/day' : '/week'}.`,
+    title: `${yacht.name} | ${yacht.length}m Gulet Kiralama`,
+    description: `${yacht.name} kiralayın, ${yacht.guests} misafir için ${yacht.cabins} kamaralı lüks ${yacht.length}m gulet. ${yacht.shortDescription} Profesyonel mürettebat, her şey dahil. €${yacht.pricePerDay?.aprilMay || yacht.pricePerWeek?.low || 0}${yacht.pricePerDay ? '/gün' : '/hafta'}'dan başlayan fiyatlarla.`,
     keywords: [
       yacht.name.toLowerCase(),
       `${yacht.length}m gulet`,
-      `${yacht.cabins} cabin yacht`,
-      `${yacht.guests} guest boat`,
-      "yacht charter turkey",
-      "gulet rental fethiye",
+      `${yacht.cabins} kamaralı yat`,
+      `${yacht.guests} misafirlik tekne`,
+      "türkiye yat kiralama",
+      "fethiye gulet kiralama",
     ],
     openGraph: {
-      title: `${yacht.name} | Luxury Gulet Charter Turkey`,
+      title: `${yacht.name} | Türkiye Lüks Gulet Kiralama`,
       description: yacht.shortDescription,
       images: [
         {
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${yacht.name} | Holiday Yacht Turkey`,
+      title: `${yacht.name} | Mavi Yolculuk Gezisi Türkiye`,
       description: yacht.shortDescription,
       images: [yacht.thumbnail],
     },

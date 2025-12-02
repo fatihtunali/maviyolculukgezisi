@@ -21,7 +21,7 @@ interface FavoritesContextType {
 
 const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
 
-const STORAGE_KEY = "holidayyachts_favorites";
+const STORAGE_KEY = "maviyolculukgezisi_favorites";
 
 export function FavoritesProvider({ children }: { children: ReactNode }) {
   const [favorites, setFavorites] = useState<FavoriteItem[]>([]);

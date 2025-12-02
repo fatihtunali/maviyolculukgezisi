@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Holiday Yacht Since 1989",
+  title: "Hakkımızda | Mavi Yolculuk Gezisi 1989'dan Beri",
   description:
-    "Holiday Yacht has been providing luxury gulet charters in Turkey since 1989. Family-owned business with 35+ years of experience. Professional crews, safety certified, award-winning service along the Turquoise Coast.",
+    "Mavi Yolculuk Gezisi, 1989'dan bu yana Türkiye'de lüks gulet kiralama hizmeti sunmaktadır. 35+ yıllık tecrübeye sahip aile şirketi. Profesyonel mürettebat, güvenlik sertifikalı, Turkuaz Kıyısı boyunca ödüllü hizmet.",
   keywords: [
-    "holiday yacht company",
-    "turkish yacht charter company",
-    "fethiye yacht rental",
-    "family yacht business turkey",
-    "blue cruise operator",
+    "mavi yolculuk gezisi şirketi",
+    "türk yat kiralama şirketi",
+    "fethiye yat kiralama",
+    "aile yat işletmesi türkiye",
+    "mavi yolculuk operatörü",
   ],
   openGraph: {
-    title: "About Holiday Yacht | 35+ Years of Excellence",
+    title: "Mavi Yolculuk Gezisi Hakkında | 35+ Yıllık Mükemmellik",
     description:
-      "Family-owned luxury yacht charter company serving the Turkish coast since 1989.",
+      "1989'dan bu yana Türk kıyılarında hizmet veren aile işletmesi lüks yat kiralama şirketi.",
     images: ["/assets/images/about/about-h4.jpg"],
   },
 };

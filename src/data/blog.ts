@@ -15,7 +15,7 @@ export interface BlogPost {
   author: string;
   publishedAt: string;
   readTime: number;
-  translations: Record<Language, BlogPostTranslation>;
+  translations: { tr: BlogPostTranslation };
 }
 
 export interface TranslatedBlogPost extends BlogPost, BlogPostTranslation {}
@@ -26,57 +26,10 @@ export const blogPosts: BlogPost[] = [
     slug: "best-time-for-blue-cruise-turkey",
     image: "/assets/images/itineraries/kekova.jpg",
     category: "guides",
-    author: "Holiday Yacht Team",
+    author: "Mavi Yolculuk Gezisi Ekibi",
     publishedAt: "2024-11-15",
     readTime: 5,
     translations: {
-      en: {
-        title: "Best Time for a Blue Cruise in Turkey: Complete 2025 Guide",
-        excerpt:
-          "Discover the perfect months to sail Turkey's Turquoise Coast. From weather conditions to crowd levels, we cover everything you need to plan your ideal yacht charter.",
-        content: `
-## When is the Best Time for a Blue Cruise in Turkey?
-
-The Turkish coast offers incredible sailing conditions from May through October, but each month brings its own unique advantages.
-
-### Peak Season: July & August
-
-**Weather:** Hot and sunny, 30-35°C air temperature, 25-28°C water temperature
-**Pros:** Perfect swimming conditions, longest days, vibrant nightlife
-**Cons:** Most crowded, highest prices, popular bays can be busy
-
-This is ideal for families with school-age children and those who love warm weather and social atmospheres.
-
-### Shoulder Season: June & September
-
-**Weather:** Warm and pleasant, 25-30°C air, 22-25°C water
-**Pros:** Fewer crowds, moderate prices, comfortable temperatures
-**Cons:** Slightly cooler water in early June
-
-Many experienced sailors consider these the best months - you get excellent weather without the peak season crowds.
-
-### Early/Late Season: May & October
-
-**Weather:** Mild, 20-25°C air, 18-22°C water
-**Pros:** Lowest prices, empty bays, green landscapes
-**Cons:** Cooler evenings, occasional rain, shorter days
-
-Perfect for those seeking tranquility and the best value for money.
-
-## Our Recommendation
-
-For first-time visitors, we recommend **early June or mid-September**. You'll enjoy:
-- Warm but not scorching temperatures
-- Calm, crystal-clear waters
-- Availability at the best anchorages
-- Better rates than peak season
-
-## Book Early for Best Selection
-
-Popular yachts book 4-6 months in advance for summer dates. Contact us early to secure your preferred yacht and itinerary.
-        `,
-        tags: ["blue cruise", "turkey", "best time", "weather", "planning"],
-      },
       tr: {
         title: "Türkiye'de Mavi Yolculuk İçin En İyi Zaman: 2025 Rehberi",
         excerpt:
@@ -124,53 +77,6 @@ Popüler yatlar yaz tarihleri için 4-6 ay önceden rezerve edilir. Tercih etti�
         `,
         tags: ["mavi yolculuk", "türkiye", "en iyi zaman", "hava", "planlama"],
       },
-      de: {
-        title: "Beste Zeit für eine Blaue Reise in der Türkei: Vollständiger Leitfaden 2025",
-        excerpt:
-          "Entdecken Sie die perfekten Monate, um an der türkischen Türkisküste zu segeln. Von Wetterbedingungen bis zu Besucherzahlen - wir behandeln alles, was Sie für Ihren idealen Yachtcharter planen müssen.",
-        content: `
-## Wann ist die beste Zeit für eine Blaue Reise in der Türkei?
-
-Die türkische Küste bietet von Mai bis Oktober unglaubliche Segelbedingungen, aber jeder Monat bringt seine eigenen einzigartigen Vorteile.
-
-### Hochsaison: Juli & August
-
-**Wetter:** Heiß und sonnig, 30-35°C Lufttemperatur, 25-28°C Wassertemperatur
-**Vorteile:** Perfekte Schwimmbedingungen, längste Tage, lebhaftes Nachtleben
-**Nachteile:** Am meisten überfüllt, höchste Preise, beliebte Buchten können voll sein
-
-Dies ist ideal für Familien mit schulpflichtigen Kindern und alle, die warmes Wetter und gesellige Atmosphäre lieben.
-
-### Zwischensaison: Juni & September
-
-**Wetter:** Warm und angenehm, 25-30°C Luft, 22-25°C Wasser
-**Vorteile:** Weniger Menschenmassen, moderate Preise, angenehme Temperaturen
-**Nachteile:** Etwas kühleres Wasser Anfang Juni
-
-Viele erfahrene Segler betrachten diese Monate als die besten - Sie bekommen ausgezeichnetes Wetter ohne die Menschenmassen der Hochsaison.
-
-### Früh-/Spätsaison: Mai & Oktober
-
-**Wetter:** Mild, 20-25°C Luft, 18-22°C Wasser
-**Vorteile:** Niedrigste Preise, leere Buchten, grüne Landschaften
-**Nachteile:** Kühlere Abende, gelegentlich Regen, kürzere Tage
-
-Perfekt für alle, die Ruhe und das beste Preis-Leistungs-Verhältnis suchen.
-
-## Unsere Empfehlung
-
-Für Erstbesucher empfehlen wir **Anfang Juni oder Mitte September**. Sie genießen:
-- Warme, aber nicht sengende Temperaturen
-- Ruhiges, kristallklares Wasser
-- Verfügbarkeit an den besten Ankerplätzen
-- Bessere Preise als in der Hochsaison
-
-## Früh Buchen für die Beste Auswahl
-
-Beliebte Yachten werden 4-6 Monate im Voraus für Sommertermine gebucht. Kontaktieren Sie uns früh, um Ihre bevorzugte Yacht und Route zu sichern.
-        `,
-        tags: ["blaue reise", "türkei", "beste zeit", "wetter", "planung"],
-      },
     },
   },
   {
@@ -178,67 +84,10 @@ Beliebte Yachten werden 4-6 Monate im Voraus für Sommertermine gebucht. Kontakt
     slug: "fethiye-vs-bodrum-which-to-choose",
     image: "/assets/images/itineraries/fethiye.jpg",
     category: "destinations",
-    author: "Holiday Yacht Team",
+    author: "Mavi Yolculuk Gezisi Ekibi",
     publishedAt: "2024-10-28",
     readTime: 6,
     translations: {
-      en: {
-        title: "Fethiye vs Bodrum: Which Turkish Sailing Destination is Right for You?",
-        excerpt:
-          "Comparing Turkey's two most popular yacht charter destinations. Discover the unique characteristics of each region to choose your perfect blue cruise starting point.",
-        content: `
-## Fethiye vs Bodrum: The Ultimate Comparison
-
-Both Fethiye and Bodrum offer world-class sailing, but they cater to different preferences. Here's our insider guide to choosing between them.
-
-### Fethiye Region
-
-**Best For:** Nature lovers, families, relaxation seekers
-
-**Highlights:**
-- Oludeniz Blue Lagoon - Turkey's most photographed beach
-- Butterfly Valley - Pristine nature reserve
-- 12 Islands Tour - Classic day sailing route
-- Göcek - Upscale marina town with protected bays
-- Kekova - Sunken city and ancient ruins
-
-**Character:** More laid-back, natural beauty, protected waters, excellent for first-time sailors
-
-### Bodrum Region
-
-**Best For:** History buffs, nightlife lovers, Greek island hoppers
-
-**Highlights:**
-- Bodrum Castle - Impressive crusader fortress
-- Greek Islands - Easy sailing to Kos, Rhodes, Symi
-- Türkbükü - Celebrity hotspot
-- Gümüşlük - Charming fishing village
-- Ancient theater with sea views
-
-**Character:** More cosmopolitan, historic sites, open waters, livelier atmosphere
-
-### Which Should You Choose?
-
-**Choose Fethiye if you want:**
-- Calmer, more protected waters
-- Focus on natural beauty and swimming
-- Family-friendly atmosphere
-- Best value for money
-
-**Choose Bodrum if you want:**
-- International Greek island hopping
-- Historic sites and culture
-- Vibrant nightlife options
-- Celebrity marina scene
-
-### Our Verdict
-
-For a classic Turkish Blue Cruise focused on relaxation and natural beauty, **Fethiye is hard to beat**. It's why we base our fleet here - the combination of stunning scenery, protected anchorages, and authentic Turkish hospitality creates the perfect sailing holiday.
-
-For those wanting to combine Turkey with Greek islands or seeking a more cosmopolitan experience, Bodrum is an excellent choice.
-        `,
-        tags: ["fethiye", "bodrum", "comparison", "destinations", "turkey"],
-      },
       tr: {
         title: "Fethiye vs Bodrum: Hangi Türk Yelken Destinasyonu Size Uygun?",
         excerpt:
@@ -296,63 +145,6 @@ Türkiye'yi Yunan adalarıyla birleştirmek isteyenler veya daha kozmopolit bir 
         `,
         tags: ["fethiye", "bodrum", "karşılaştırma", "destinasyonlar", "türkiye"],
       },
-      de: {
-        title: "Fethiye vs Bodrum: Welches türkische Segelziel ist das Richtige für Sie?",
-        excerpt:
-          "Vergleich der zwei beliebtesten Yachtcharter-Destinationen der Türkei. Entdecken Sie die einzigartigen Eigenschaften jeder Region, um Ihren perfekten Startpunkt für die Blaue Reise zu wählen.",
-        content: `
-## Fethiye vs Bodrum: Der ultimative Vergleich
-
-Sowohl Fethiye als auch Bodrum bieten erstklassiges Segeln, aber sie sprechen unterschiedliche Vorlieben an. Hier ist unser Insider-Leitfaden zur Auswahl.
-
-### Region Fethiye
-
-**Ideal für:** Naturliebhaber, Familien, Erholungssuchende
-
-**Highlights:**
-- Ölüdeniz Blaue Lagune - Türkeis meistfotografierter Strand
-- Schmetterlingstal - Unberührtes Naturschutzgebiet
-- 12-Inseln-Tour - Klassische Tagessegelroute
-- Göcek - Gehobene Marina-Stadt mit geschützten Buchten
-- Kekova - Versunkene Stadt und antike Ruinen
-
-**Charakter:** Entspannter, natürliche Schönheit, geschützte Gewässer, ausgezeichnet für Erstsegler
-
-### Region Bodrum
-
-**Ideal für:** Geschichtsinteressierte, Nachtlebenliebhaber, Griechische-Inseln-Hopper
-
-**Highlights:**
-- Burg von Bodrum - Beeindruckende Kreuzritterburg
-- Griechische Inseln - Einfaches Segeln nach Kos, Rhodos, Symi
-- Türkbükü - Promi-Hotspot
-- Gümüşlük - Charmantes Fischerdorf
-- Antikes Theater mit Meerblick
-
-**Charakter:** Kosmopolitischer, historische Stätten, offene Gewässer, lebhaftere Atmosphäre
-
-### Welches sollten Sie wählen?
-
-**Wählen Sie Fethiye wenn Sie wollen:**
-- Ruhigere, geschütztere Gewässer
-- Fokus auf natürliche Schönheit und Schwimmen
-- Familienfreundliche Atmosphäre
-- Bestes Preis-Leistungs-Verhältnis
-
-**Wählen Sie Bodrum wenn Sie wollen:**
-- Internationales Griechische-Inseln-Hopping
-- Historische Stätten und Kultur
-- Lebhafte Nachtlebenoptionen
-- Promi-Marina-Szene
-
-### Unser Fazit
-
-Für eine klassische türkische Blaue Reise mit Fokus auf Entspannung und natürliche Schönheit ist **Fethiye schwer zu schlagen**. Deshalb haben wir hier unsere Flotte stationiert - die Kombination aus atemberaubender Landschaft, geschützten Ankerplätzen und authentischer türkischer Gastfreundschaft schafft den perfekten Segelurlaub.
-
-Für diejenigen, die die Türkei mit griechischen Inseln kombinieren möchten oder eine kosmopolitischere Erfahrung suchen, ist Bodrum eine ausgezeichnete Wahl.
-        `,
-        tags: ["fethiye", "bodrum", "vergleich", "destinationen", "türkei"],
-      },
     },
   },
   {
@@ -360,88 +152,10 @@ Für diejenigen, die die Türkei mit griechischen Inseln kombinieren möchten od
     slug: "what-to-pack-for-yacht-charter-turkey",
     image: "/assets/images/about/about-h4.jpg",
     category: "tips",
-    author: "Holiday Yacht Team",
+    author: "Mavi Yolculuk Gezisi Ekibi",
     publishedAt: "2024-10-15",
     readTime: 4,
     translations: {
-      en: {
-        title: "What to Pack for Your Yacht Charter: The Complete Packing List",
-        excerpt:
-          "Our essential packing guide for a gulet cruise in Turkey. From clothing to gadgets, here's everything you need for the perfect sailing holiday.",
-        content: `
-## The Essential Yacht Charter Packing List
-
-Packing for a yacht charter is different from a regular holiday. Space is limited, and you'll be living in swimwear most of the time. Here's our tried-and-tested packing guide.
-
-### The Golden Rules
-
-1. **Use soft bags** - Hard suitcases don't fit in cabin storage
-2. **Pack light** - You'll need less than you think
-3. **Layer up** - Evenings can be cool on the water
-4. **Non-marking soles only** - Protects the teak deck
-
-### Clothing Essentials
-
-**Daytime:**
-- 3-4 swimsuits (they need time to dry)
-- Light cover-ups and sarongs
-- Shorts and t-shirts
-- Light long-sleeve shirt (sun protection)
-
-**Evening:**
-- 2-3 casual evening outfits
-- Light cardigan or jacket
-- One smart-casual outfit for marina dinners
-
-**Footwear:**
-- Deck shoes with non-marking white soles
-- Reef shoes for rocky beaches
-- Sandals for shore excursions
-
-### Sun Protection
-
-- High SPF sunscreen (reef-safe preferred)
-- Wide-brimmed hat
-- Quality sunglasses with strap
-- UV protection rash vest
-
-### Practical Items
-
-- Waterproof phone case
-- Dry bag for excursions
-- Snorkeling mask (we provide equipment, but your own fits better)
-- Motion sickness remedies if needed
-- Basic first aid and any medications
-
-### What We Provide
-
-Don't worry about bringing:
-- Beach towels
-- Bed linens
-- Snorkeling equipment
-- Water toys (kayaks, paddleboards)
-- Toiletries basics
-
-### Pro Tips from Our Crew
-
-1. Bring a light windbreaker - sea breezes can be fresh
-2. Pack quick-dry fabrics
-3. Leave the jewelry at home - you won't need it
-4. Bring a good book - perfect for sundeck relaxation
-5. A small backpack for shore excursions is handy
-
-### What NOT to Bring
-
-- High heels (seriously!)
-- Excessive luggage
-- Valuable jewelry
-- Dark-soled shoes
-- Hair dryers (we have them onboard)
-
-Travel light, live light, and enjoy every moment of your blue cruise adventure!
-        `,
-        tags: ["packing", "tips", "preparation", "what to bring"],
-      },
       tr: {
         title: "Yat Kiralama İçin Ne Paketlemeli: Eksiksiz Paketleme Listesi",
         excerpt:
@@ -520,84 +234,6 @@ Hafif seyahat edin, hafif yaşayın ve mavi yolculuk maceranızın her anının 
         `,
         tags: ["paketleme", "ipuçları", "hazırlık", "ne getirmeli"],
       },
-      de: {
-        title: "Was Sie für Ihren Yachtcharter einpacken sollten: Die komplette Packliste",
-        excerpt:
-          "Unser essentieller Packführer für eine Gulet-Kreuzfahrt in der Türkei. Von Kleidung bis Gadgets - hier ist alles, was Sie für den perfekten Segelurlaub brauchen.",
-        content: `
-## Die essentielle Yachtcharter-Packliste
-
-Das Packen für einen Yachtcharter unterscheidet sich von einem normalen Urlaub. Der Platz ist begrenzt, und Sie werden die meiste Zeit in Badekleidung verbringen. Hier ist unser bewährter Packführer.
-
-### Die goldenen Regeln
-
-1. **Verwenden Sie weiche Taschen** - Hartschalenkoffer passen nicht in den Kabinenspeicher
-2. **Packen Sie leicht** - Sie brauchen weniger als Sie denken
-3. **Schichten Sie** - Abende können kühl auf dem Wasser sein
-4. **Nur nicht markierende Sohlen** - Schützt das Teakdeck
-
-### Kleidungsgrundlagen
-
-**Tagsüber:**
-- 3-4 Badeanzüge (sie brauchen Zeit zum Trocknen)
-- Leichte Überwürfe und Sarongs
-- Shorts und T-Shirts
-- Leichtes langärmeliges Hemd (Sonnenschutz)
-
-**Abends:**
-- 2-3 lässige Abendoutfits
-- Leichte Strickjacke oder Jacke
-- Ein smart-casual Outfit für Marina-Abendessen
-
-**Schuhe:**
-- Deckschuhe mit nicht markierenden weißen Sohlen
-- Riffschuhe für felsige Strände
-- Sandalen für Landausflüge
-
-### Sonnenschutz
-
-- Sonnencreme mit hohem LSF (riffsicher bevorzugt)
-- Breitkrempiger Hut
-- Qualitäts-Sonnenbrille mit Band
-- UV-Schutz-Rashguard
-
-### Praktische Gegenstände
-
-- Wasserdichte Handyhülle
-- Trockentasche für Ausflüge
-- Schnorchelmaske (wir stellen Ausrüstung bereit, aber Ihre eigene passt besser)
-- Mittel gegen Seekrankheit bei Bedarf
-- Grundlegende Erste Hilfe und alle Medikamente
-
-### Was wir bereitstellen
-
-Keine Sorge, Sie müssen nicht mitbringen:
-- Strandtücher
-- Bettwäsche
-- Schnorchelausrüstung
-- Wasserspielzeug (Kajaks, Paddleboards)
-- Grundlegende Toilettenartikel
-
-### Profi-Tipps von unserer Crew
-
-1. Bringen Sie eine leichte Windjacke mit - Meerbrisen können frisch sein
-2. Packen Sie schnelltrocknende Stoffe
-3. Lassen Sie den Schmuck zu Hause - Sie werden ihn nicht brauchen
-4. Bringen Sie ein gutes Buch mit - perfekt für Entspannung auf dem Sonnendeck
-5. Ein kleiner Rucksack für Landausflüge ist praktisch
-
-### Was Sie NICHT mitbringen sollten
-
-- High Heels (im Ernst!)
-- Übermäßiges Gepäck
-- Wertvoller Schmuck
-- Schuhe mit dunklen Sohlen
-- Haartrockner (wir haben sie an Bord)
-
-Reisen Sie leicht, leben Sie leicht und genießen Sie jeden Moment Ihres Blaue-Reise-Abenteuers!
-        `,
-        tags: ["packen", "tipps", "vorbereitung", "was mitbringen"],
-      },
     },
   },
   {
@@ -605,82 +241,10 @@ Reisen Sie leicht, leben Sie leicht und genießen Sie jeden Moment Ihres Blaue-R
     slug: "turkish-cuisine-gulet-experience",
     image: "/assets/images/about/about-h41.jpg",
     category: "guides",
-    author: "Holiday Yacht Team",
+    author: "Mavi Yolculuk Gezisi Ekibi",
     publishedAt: "2024-09-20",
     readTime: 5,
     translations: {
-      en: {
-        title: "A Culinary Journey: Turkish Cuisine on Your Gulet Charter",
-        excerpt:
-          "Discover the delicious world of Turkish cuisine prepared fresh daily by our onboard chefs. From mezze to fresh seafood, every meal is a celebration.",
-        content: `
-## Turkish Cuisine: A Highlight of Your Blue Cruise
-
-One of the most memorable aspects of a gulet charter is the exceptional food. Our onboard chefs prepare authentic Turkish cuisine using fresh, local ingredients daily.
-
-### A Typical Day of Dining
-
-**Breakfast (08:30-10:00)**
-A lavish spread awaits you each morning:
-- Fresh bread from local bakeries
-- Turkish cheeses and olives
-- Organic eggs prepared your way
-- Honey, jams, and clotted cream
-- Fresh fruits and vegetables
-- Turkish tea and coffee
-
-**Lunch (13:00-14:00)**
-Light but satisfying meals perfect for warm days:
-- Fresh salads with local produce
-- Grilled fish or chicken
-- Mediterranean mezze selection
-- Pasta dishes
-- Turkish pide (flatbread)
-
-**Dinner (20:00-21:30)**
-The main culinary event:
-- Multiple mezze starters
-- Fresh catch of the day
-- Grilled meats or seafood
-- Traditional Turkish dishes
-- Homemade desserts
-
-### Signature Turkish Dishes You'll Enjoy
-
-- **Mezze** - Small dishes like hummus, stuffed vine leaves, eggplant salads
-- **Fresh Fish** - Caught locally, grilled to perfection
-- **Köfte** - Turkish meatballs with herbs and spices
-- **İmam Bayıldı** - Stuffed eggplant in olive oil
-- **Baklava** - Layered pastry with nuts and honey
-- **Turkish Delight** - Sweet treats with tea
-
-### Dietary Requirements
-
-Our chefs happily accommodate:
-- Vegetarian and vegan diets
-- Gluten-free requirements
-- Food allergies
-- Children's preferences
-- Religious dietary needs
-
-Please inform us when booking so we can prepare accordingly.
-
-### Fresh and Local
-
-We source ingredients from:
-- Morning fish markets
-- Local farmers' markets
-- Regional producers
-- Onboard herb garden
-
-Everything is prepared fresh - no pre-packaged meals here!
-
-### The Social Experience
-
-Meals on a gulet are social occasions. Dining together on the aft deck under the stars, with the gentle sound of waves, creates unforgettable memories. It's not just food - it's an experience.
-        `,
-        tags: ["food", "cuisine", "turkish", "dining", "chef"],
-      },
       tr: {
         title: "Bir Lezzet Yolculuğu: Gulet Kiralamada Türk Mutfağı",
         excerpt:
@@ -753,78 +317,6 @@ Gulette yemekler sosyal olaylardır. Yıldızların altında, dalgaların nazik 
         `,
         tags: ["yemek", "mutfak", "türk", "yemek yeme", "şef"],
       },
-      de: {
-        title: "Eine kulinarische Reise: Türkische Küche auf Ihrem Gulet-Charter",
-        excerpt:
-          "Entdecken Sie die köstliche Welt der türkischen Küche, die täglich frisch von unseren Bordköchen zubereitet wird. Von Mezze bis frische Meeresfrüchte - jede Mahlzeit ist ein Fest.",
-        content: `
-## Türkische Küche: Ein Höhepunkt Ihrer Blauen Reise
-
-Einer der unvergesslichsten Aspekte eines Gulet-Charters ist das außergewöhnliche Essen. Unsere Bordköche bereiten täglich authentische türkische Küche mit frischen, lokalen Zutaten zu.
-
-### Ein typischer Essenstag
-
-**Frühstück (08:30-10:00)**
-Ein üppiges Buffet erwartet Sie jeden Morgen:
-- Frisches Brot von lokalen Bäckereien
-- Türkische Käse und Oliven
-- Bio-Eier nach Ihrem Geschmack zubereitet
-- Honig, Marmeladen und Clotted Cream
-- Frisches Obst und Gemüse
-- Türkischer Tee und Kaffee
-
-**Mittagessen (13:00-14:00)**
-Leichte, aber sättigende Mahlzeiten perfekt für warme Tage:
-- Frische Salate mit lokalen Produkten
-- Gegrillter Fisch oder Hühnchen
-- Mediterrane Mezze-Auswahl
-- Pasta-Gerichte
-- Türkisches Pide (Fladenbrot)
-
-**Abendessen (20:00-21:30)**
-Das kulinarische Hauptereignis:
-- Mehrere Mezze-Vorspeisen
-- Frischer Tagesfang
-- Gegrilltes Fleisch oder Meeresfrüchte
-- Traditionelle türkische Gerichte
-- Hausgemachte Desserts
-
-### Türkische Signature-Gerichte, die Sie genießen werden
-
-- **Mezze** - Kleine Gerichte wie Hummus, gefüllte Weinblätter, Auberginensalate
-- **Frischer Fisch** - Lokal gefangen, perfekt gegrillt
-- **Köfte** - Türkische Fleischbällchen mit Kräutern und Gewürzen
-- **İmam Bayıldı** - Gefüllte Aubergine in Olivenöl
-- **Baklava** - Schichtgebäck mit Nüssen und Honig
-- **Lokum** - Süße Leckereien zum Tee
-
-### Ernährungsanforderungen
-
-Unsere Köche berücksichtigen gerne:
-- Vegetarische und vegane Ernährung
-- Glutenfreie Anforderungen
-- Lebensmittelallergien
-- Kinderpräferenzen
-- Religiöse Ernährungsbedürfnisse
-
-Bitte informieren Sie uns bei der Buchung, damit wir entsprechend vorbereiten können.
-
-### Frisch und Lokal
-
-Wir beziehen Zutaten von:
-- Morgendlichen Fischmärkten
-- Lokalen Bauernmärkten
-- Regionalen Erzeugern
-- Bordkräutergarten
-
-Alles wird frisch zubereitet - keine vorverpackten Mahlzeiten hier!
-
-### Das soziale Erlebnis
-
-Mahlzeiten auf einem Gulet sind gesellschaftliche Anlässe. Gemeinsam auf dem Achterdeck unter den Sternen zu speisen, mit dem sanften Klang der Wellen, schafft unvergessliche Erinnerungen. Es ist nicht nur Essen - es ist ein Erlebnis.
-        `,
-        tags: ["essen", "küche", "türkisch", "speisen", "koch"],
-      },
     },
   },
 ];
@@ -833,7 +325,7 @@ export function getTranslatedBlogPost(
   post: BlogPost,
   language: Language
 ): TranslatedBlogPost {
-  const translation = post.translations[language] || post.translations.en;
+  const translation = post.translations[language] || post.translations.tr;
   return { ...post, ...translation };
 }
 

@@ -2,7 +2,7 @@
 
 import { createContext, useContext, ReactNode } from "react";
 
-export type Language = "tr" | "en" | "de";
+export type Language = "tr";
 
 interface LanguageContextType {
   language: Language;
@@ -56,7 +56,7 @@ const translations: { tr: Record<string, string> } = {
 
     // Home About
     "home.about.title": "Akdeniz Rüyasına Açılan Kapınız",
-    "home.about.desc1": "1989'dan beri Holiday Yacht, Türkiye'nin muhteşem Turkuaz Kıyıları boyunca unutulmaz mavi yolculuk deneyimleri sunuyor. Light Tours ailesinin bir parçası olarak, onlarca yıllık denizcilik uzmanlığını gerçek Türk misafirperverliğiyle birleştiriyoruz.",
+    "home.about.desc1": "1989'dan beri Mavi Yolculuk Gezisi, Türkiye'nin muhteşem Turkuaz Kıyıları boyunca unutulmaz mavi yolculuk deneyimleri sunuyor. Light Tours ailesinin bir parçası olarak, onlarca yıllık denizcilik uzmanlığını gerçek Türk misafirperverliğiyle birleştiriyoruz.",
     "home.about.desc2": "El yapımı gulet filomuz, modern konfor ve olanaklarla güçlendirilmiş geleneksel Türk tekne yapımının en iyisini temsil ediyor.",
 
     // Home Stats
@@ -277,7 +277,7 @@ const translations: { tr: Record<string, string> } = {
 
     // About
     "about.badge": "1989'dan Beri",
-    "about.title": "Holiday Yacht Hakkında",
+    "about.title": "Mavi Yolculuk Gezisi Hakkında",
     "about.subtitle": "Otuz yılı aşkın süredir unutulmaz mavi yolculuk deneyimleri sunuyoruz.",
     "about.stats.years": "Yıllık Deneyim",
     "about.stats.gulets": "Lüks Gulet",
@@ -285,7 +285,7 @@ const translations: { tr: Record<string, string> } = {
     "about.stats.destinations": "Destinasyon",
     "about.story.badge": "Hikayemiz",
     "about.story.title": "Turkuaz Kıyıları'nda Mükemmellik Mirası",
-    "about.story.p1": "1989 yılında şirin kıyı kasabası Fethiye'de kurulan Holiday Yacht, basit bir vizyonla başladı: Türkiye'nin Akdeniz kıyılarının nefes kesici güzelliğini dünyadan gelen gezginlerle paylaşmak.",
+    "about.story.p1": "1989 yılında şirin kıyı kasabası Fethiye'de kurulan Mavi Yolculuk Gezisi, basit bir vizyonla başladı: Türkiye'nin Akdeniz kıyılarının nefes kesici güzelliğini dünyadan gelen gezginlerle paylaşmak.",
     "about.story.p2": "Light Tours ailesinin bir parçası olarak, küçük bir yerel işletmeden bölgenin en saygın yat kiralama şirketlerinden birine dönüştük.",
     "about.story.p3": "Bugün, 35 yılı aşkın süredir bize yol gösteren değerleri sürdürüyoruz: olağanüstü hizmet, otantik deneyimler ve misafir memnuniyetine sarsılmaz bağlılık.",
     "about.values.badge": "Değerlerimiz",
@@ -300,7 +300,7 @@ const translations: { tr: Record<string, string> } = {
     "about.values.personalDesc": "Her charter tercihlerinize göre özelleştirilir.",
     "about.team.badge": "Ekibimiz",
     "about.team.title": "Mürettebatla Tanışın",
-    "about.team.subtitle": "Deneyimli mürettebat üyelerimiz Holiday Yacht'ın kalbidir.",
+    "about.team.subtitle": "Deneyimli mürettebat üyelerimiz Mavi Yolculuk Gezisi'nin kalbidir.",
     "about.team.captain": "Kaptan",
     "about.team.captainDesc": "Onlarca yıllık deneyime sahip uzman denizciler.",
     "about.team.chef": "Şef",
@@ -312,7 +312,7 @@ const translations: { tr: Record<string, string> } = {
     "about.cta.fleet": "Filomuzu Keşfedin",
     "about.cta.contact": "Bize Ulaşın",
     "about.lightTours.title": "Light Tours Ailesinin Bir Parçası",
-    "about.lightTours.desc": "Holiday Yacht, kapsamlı bir seyahat acentası olan Light Tours'un gurur duyduğu bir parçasıdır.",
+    "about.lightTours.desc": "Mavi Yolculuk Gezisi, kapsamlı bir seyahat acentası olan Light Tours'un gurur duyduğu bir parçasıdır.",
 
     // Itineraries
     "itineraries.badge": "Özel Rotalar",

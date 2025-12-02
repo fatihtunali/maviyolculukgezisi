@@ -11,7 +11,7 @@ export default function PrivacyPage() {
     en: {
       title: "Privacy Policy",
       lastUpdated: "Last updated: January 2025",
-      intro: "At Holiday Yacht, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our website and services.",
+      intro: "At Mavi Yolculuk Gezisi, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our website and services.",
       sections: [
         {
           title: "1. Information We Collect",
@@ -108,19 +108,19 @@ You can control cookies through your browser settings. Note that disabling cooki
           title: "10. Contact Us",
           content: `If you have any questions about this Privacy Policy or our data practices, please contact us:
 
-**Holiday Yacht Charter**
+**Mavi Yolculuk Gezisi**
 Address: Fethiye Marina, Muğla, Turkey
-Email: info@holidayyachts.com
+Email: info@maviyolculukgezisi.com
 Phone: +90 252 614 47 57
 
-For data protection inquiries, you may also contact our Data Protection Officer at privacy@holidayyachts.com.`
+For data protection inquiries, you may also contact our Data Protection Officer at privacy@maviyolculukgezisi.com.`
         }
       ]
     },
     tr: {
       title: "Gizlilik Politikası",
       lastUpdated: "Son güncelleme: Ocak 2025",
-      intro: "Holiday Yacht olarak, gizliliğinizi korumaya ve kişisel bilgilerinizin güvenliğini sağlamaya kararlıyız. Bu Gizlilik Politikası, web sitemizi ve hizmetlerimizi kullandığınızda verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.",
+      intro: "Mavi Yolculuk Gezisi olarak, gizliliğinizi korumaya ve kişisel bilgilerinizin güvenliğini sağlamaya kararlıyız. Bu Gizlilik Politikası, web sitemizi ve hizmetlerimizi kullandığınızda verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.",
       sections: [
         {
           title: "1. Topladığımız Bilgiler",
@@ -217,19 +217,19 @@ Bu hakları kullanmak için lütfen aşağıdaki iletişim bilgilerini kullanara
           title: "10. Bize Ulaşın",
           content: `Bu Gizlilik Politikası veya veri uygulamalarımız hakkında sorularınız varsa, lütfen bizimle iletişime geçin:
 
-**Holiday Yacht Charter**
+**Mavi Yolculuk Gezisi**
 Adres: Fethiye Marina, Muğla, Türkiye
-E-posta: info@holidayyachts.com
+E-posta: info@maviyolculukgezisi.com
 Telefon: +90 252 614 47 57
 
-Veri koruma sorularınız için Veri Koruma Görevlimize privacy@holidayyachts.com adresinden de ulaşabilirsiniz.`
+Veri koruma sorularınız için Veri Koruma Görevlimize privacy@maviyolculukgezisi.com adresinden de ulaşabilirsiniz.`
         }
       ]
     },
     de: {
       title: "Datenschutzerklärung",
       lastUpdated: "Zuletzt aktualisiert: Januar 2025",
-      intro: "Bei Holiday Yacht sind wir bestrebt, Ihre Privatsphäre zu schützen und die Sicherheit Ihrer persönlichen Daten zu gewährleisten. Diese Datenschutzerklärung erklärt, wie wir Ihre Daten erfassen, verwenden und schützen, wenn Sie unsere Website und Dienste nutzen.",
+      intro: "Bei Mavi Yolculuk Gezisi sind wir bestrebt, Ihre Privatsphäre zu schützen und die Sicherheit Ihrer persönlichen Daten zu gewährleisten. Diese Datenschutzerklärung erklärt, wie wir Ihre Daten erfassen, verwenden und schützen, wenn Sie unsere Website und Dienste nutzen.",
       sections: [
         {
           title: "1. Informationen, die wir erfassen",
@@ -326,12 +326,12 @@ Sie können Cookies über Ihre Browsereinstellungen steuern. Beachten Sie, dass 
           title: "10. Kontaktieren Sie uns",
           content: `Wenn Sie Fragen zu dieser Datenschutzerklärung oder unseren Datenpraktiken haben, kontaktieren Sie uns bitte:
 
-**Holiday Yacht Charter**
+**Mavi Yolculuk Gezisi**
 Adresse: Fethiye Marina, Muğla, Türkei
-E-Mail: info@holidayyachts.com
+E-Mail: info@maviyolculukgezisi.com
 Telefon: +90 252 614 47 57
 
-Für Datenschutzanfragen können Sie auch unseren Datenschutzbeauftragten unter privacy@holidayyachts.com kontaktieren.`
+Für Datenschutzanfragen können Sie auch unseren Datenschutzbeauftragten unter privacy@maviyolculukgezisi.com kontaktieren.`
         }
       ]
     }
@@ -404,11 +404,11 @@ Für Datenschutzanfragen können Sie auch unseren Datenschutzbeauftragten unter 
               </h3>
               <div className="flex flex-wrap gap-6">
                 <a
-                  href="mailto:info@holidayyachts.com"
+                  href="mailto:info@maviyolculukgezisi.com"
                   className="flex items-center gap-2 text-amber-600 hover:text-amber-700"
                 >
                   <Mail className="h-5 w-5" />
-                  info@holidayyachts.com
+                  info@maviyolculukgezisi.com
                 </a>
                 <a
                   href="tel:+902526144757"

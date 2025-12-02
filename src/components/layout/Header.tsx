@@ -12,8 +12,6 @@ import {
   X,
   Phone,
   Mail,
-  ChevronDown,
-  Anchor,
   Heart,
 } from "lucide-react";
 import { useFavorites } from "@/contexts/FavoritesContext";
@@ -57,15 +55,15 @@ export function Header() {
               +90 252 614 47 57
             </a>
             <a
-              href="mailto:info@holidayyachts.com"
+              href="mailto:info@maviyolculukgezisi.com"
               className="flex items-center gap-2 hover:text-amber-400 transition-colors"
             >
               <Mail className="h-4 w-4" />
-              info@holidayyachts.com
+              info@maviyolculukgezisi.com
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-slate-400">Luxury Yacht Charters Since 1989</span>
+            <span className="text-slate-400">1989'dan Beri Lüks Yat Kiralama</span>
           </div>
         </div>
       </div>
@@ -82,17 +80,15 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-12 h-12">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
-                  <Anchor className="h-6 w-6 text-white" />
-                </div>
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-slate-800">
-                  Holiday Yacht
-                </h1>
-                <p className="text-xs text-slate-500">Luxury Gulet Charters</p>
+            <Link href="/" className="flex items-center">
+              <div className="relative h-14 w-36 sm:h-16 sm:w-44">
+                <Image
+                  src="/assets/images/logo/logo-header.png"
+                  alt="Mavi Yolculuk Gezisi"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
             </Link>
 

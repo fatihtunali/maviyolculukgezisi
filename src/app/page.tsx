@@ -243,7 +243,7 @@ export default function HomePage() {
               <div className="relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden">
                 <Image
                   src="/assets/images/about/about-h4.jpg"
-                  alt="Holiday Yacht Experience"
+                  alt="Mavi Yolculuk Gezisi Deneyimi"
                   fill
                   className="object-cover"
                 />

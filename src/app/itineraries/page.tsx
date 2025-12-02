@@ -18,7 +18,7 @@ export default function ItinerariesPage() {
       <section className="relative h-[40vh] min-h-[300px] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="/assets/images/itineraries/fethiye.jpg"
+            src="/assets/images/hero/holiday10-hero.jpg"
             alt={t("itineraries.title")}
             fill
             className="object-cover"

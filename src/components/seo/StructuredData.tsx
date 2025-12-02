@@ -2,12 +2,12 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Holiday Yacht",
-    alternateName: "Holiday Yachts Turkey",
-    url: "https://www.holidayyachts.com",
-    logo: "https://www.holidayyachts.com/assets/images/logo.png",
+    name: "Mavi Yolculuk Gezisi",
+    alternateName: "Mavi Yolculuk Gezisi Türkiye",
+    url: "https://www.maviyolculukgezisi.com",
+    logo: "https://www.maviyolculukgezisi.com/assets/images/logo/logo-main.png",
     description:
-      "Premium luxury gulet charter company in Turkey offering blue cruise experiences along the Turquoise Coast since 1989.",
+      "1989'dan beri Türkiye'de Turkuaz Kıyısı boyunca mavi yolculuk deneyimleri sunan premium lüks gulet kiralama şirketi.",
     foundingDate: "1989",
     address: {
       "@type": "PostalAddress",
@@ -24,8 +24,8 @@ export function OrganizationSchema() {
       availableLanguage: ["English", "Turkish", "German"],
     },
     sameAs: [
-      "https://www.facebook.com/holidayyacht",
-      "https://www.instagram.com/holidayyacht",
+      "https://www.facebook.com/maviyolculukgezisi",
+      "https://www.instagram.com/maviyolculukgezisi",
     ],
   };
 
@@ -41,10 +41,10 @@ export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    name: "Holiday Yacht",
-    image: "https://www.holidayyachts.com/assets/images/og-image.jpg",
-    "@id": "https://www.holidayyachts.com",
-    url: "https://www.holidayyachts.com",
+    name: "Mavi Yolculuk Gezisi",
+    image: "https://www.maviyolculukgezisi.com/assets/images/logo/logo-main.png",
+    "@id": "https://www.maviyolculukgezisi.com",
+    url: "https://www.maviyolculukgezisi.com",
     telephone: "+90-252-614-4757",
     priceRange: "€€€",
     address: {
@@ -93,13 +93,13 @@ export function WebsiteSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Holiday Yacht",
-    url: "https://www.holidayyachts.com",
+    name: "Mavi Yolculuk Gezisi",
+    url: "https://www.maviyolculukgezisi.com",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://www.holidayyachts.com/search?q={search_term_string}",
+        urlTemplate: "https://www.maviyolculukgezisi.com/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -170,7 +170,7 @@ export function YachtSchema({
     url: url,
     brand: {
       "@type": "Brand",
-      name: "Holiday Yacht",
+      name: "Mavi Yolculuk Gezisi",
     },
     offers: {
       "@type": "Offer",
@@ -180,7 +180,7 @@ export function YachtSchema({
       availability: "https://schema.org/InStock",
       seller: {
         "@type": "Organization",
-        name: "Holiday Yacht",
+        name: "Mavi Yolculuk Gezisi",
       },
     },
     aggregateRating: {

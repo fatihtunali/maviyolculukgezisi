@@ -65,8 +65,8 @@ export default function DestinationPage() {
     "@type": "TouristDestination",
     name: destination.name,
     description: destination.description,
-    image: `https://www.holidayyachts.com${destination.image}`,
-    url: `https://www.holidayyachts.com/destinations/${destination.slug}`,
+    image: `https://www.maviyolculukgezisi.com${destination.image}`,
+    url: `https://www.maviyolculukgezisi.com/destinations/${destination.slug}`,
     touristType: destination.idealFor,
     includesAttraction: destination.keyAttractions.map((attr) => ({
       "@type": "TouristAttraction",
@@ -84,11 +84,11 @@ export default function DestinationPage() {
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.holidayyachts.com" },
-          { name: "Destinations", url: "https://www.holidayyachts.com/destinations" },
+          { name: "Home", url: "https://www.maviyolculukgezisi.com" },
+          { name: "Destinations", url: "https://www.maviyolculukgezisi.com/destinations" },
           {
             name: destination.name,
-            url: `https://www.holidayyachts.com/destinations/${destination.slug}`,
+            url: `https://www.maviyolculukgezisi.com/destinations/${destination.slug}`,
           },
         ]}
       />

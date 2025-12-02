@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Holiday Yacht",
+  title: "Şartlar ve Koşullar | Mavi Yolculuk Gezisi",
   description:
-    "Read Holiday Yacht's Terms and Conditions for yacht charter bookings. Understand our booking policies, cancellation terms, and charter conditions.",
+    "Mavi Yolculuk Gezisi yat kiralama rezervasyonları için Şartlar ve Koşullarımızı okuyun. Rezervasyon politikalarımızı, iptal koşullarını ve kiralama şartlarını öğrenin.",
   openGraph: {
-    title: "Terms & Conditions | Holiday Yacht",
+    title: "Şartlar ve Koşullar | Mavi Yolculuk Gezisi",
     description:
-      "Read Holiday Yacht's Terms and Conditions for yacht charter bookings.",
+      "Mavi Yolculuk Gezisi yat kiralama rezervasyonları için Şartlar ve Koşullarımızı okuyun.",
     type: "website",
   },
   robots: {

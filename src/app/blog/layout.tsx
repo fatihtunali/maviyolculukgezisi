@@ -1,48 +1,46 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Blue Cruise Tips & Travel Guides | Holiday Yacht",
+  title: "Blog | Mavi Yolculuk İpuçları ve Gezi Rehberleri | Mavi Yolculuk Gezisi",
   description:
-    "Expert advice, destination guides, and insider tips for your perfect yacht charter experience along Turkey's Turquoise Coast. Read our latest articles on blue cruises.",
+    "Türkiye'nin Turkuaz Kıyısı'nda mükemmel yat kiralama deneyiminiz için uzman tavsiyeleri, destinasyon rehberleri ve içeriden ipuçları. Mavi yolculuk hakkında en son makalelerimizi okuyun.",
   keywords: [
-    "blue cruise blog",
-    "yacht charter tips",
-    "Turkey travel guide",
-    "Turquoise Coast blog",
-    "sailing tips Turkey",
-    "gulet cruise advice",
-    "Turkish coast guide",
-    "yacht vacation tips",
-    "Mediterranean sailing blog",
-    "Fethiye travel tips",
+    "mavi yolculuk blogu",
+    "yat kiralama ipuçları",
+    "türkiye gezi rehberi",
+    "turkuaz kıyısı blogu",
+    "türkiye yelken ipuçları",
+    "gulet gezisi tavsiyeleri",
+    "türk kıyısı rehberi",
+    "yat tatili ipuçları",
+    "akdeniz yelken blogu",
+    "fethiye gezi ipuçları",
   ],
   openGraph: {
-    title: "Blog | Blue Cruise Tips & Travel Guides | Holiday Yacht",
+    title: "Blog | Mavi Yolculuk İpuçları ve Gezi Rehberleri | Mavi Yolculuk Gezisi",
     description:
-      "Expert advice, destination guides, and insider tips for your perfect yacht charter experience along Turkey's Turquoise Coast.",
+      "Türkiye'nin Turkuaz Kıyısı'nda mükemmel yat kiralama deneyiminiz için uzman tavsiyeleri, destinasyon rehberleri ve içeriden ipuçları.",
     type: "website",
-    locale: "en_US",
-    siteName: "Holiday Yacht",
+    locale: "tr_TR",
+    siteName: "Mavi Yolculuk Gezisi",
     images: [
       {
         url: "/assets/images/hero/holiday10-hero.jpg",
         width: 1200,
         height: 630,
-        alt: "Holiday Yacht Blog",
+        alt: "Mavi Yolculuk Gezisi Blog",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | Blue Cruise Tips & Travel Guides | Holiday Yacht",
+    title: "Blog | Mavi Yolculuk İpuçları ve Gezi Rehberleri | Mavi Yolculuk Gezisi",
     description:
-      "Expert advice, destination guides, and insider tips for your perfect yacht charter experience.",
+      "Mükemmel yat kiralama deneyiminiz için uzman tavsiyeleri, destinasyon rehberleri ve içeriden ipuçları.",
   },
   alternates: {
     languages: {
-      "en-US": "/blog",
       "tr-TR": "/blog",
-      "de-DE": "/blog",
     },
   },
 };

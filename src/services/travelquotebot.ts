@@ -16,7 +16,7 @@ import type {
 
 // TravelQuoteBot API Configuration
 const TQB_API_BASE_URL = process.env.NEXT_PUBLIC_TQB_API_URL || "https://api.travelquotebot.com";
-const TQB_OPERATOR_ID = process.env.TQB_OPERATOR_ID || "holidayyachts";
+const TQB_OPERATOR_ID = process.env.TQB_OPERATOR_ID || "maviyolculukgezisi";
 const TQB_API_KEY = process.env.TQB_API_KEY || "";
 
 class TravelQuoteBotService {

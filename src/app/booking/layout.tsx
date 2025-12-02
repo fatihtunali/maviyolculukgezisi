@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book Your Charter | Check Availability",
+  title: "Rezervasyon Yapın | Müsaitlik Kontrolü",
   description:
-    "Book your luxury gulet charter in Turkey. Check real-time availability, select your yacht, choose dates and itinerary. Instant confirmation. Secure booking with Holiday Yacht.",
+    "Türkiye'de lüks gulet kiralamanızı rezerve edin. Gerçek zamanlı müsaitlik kontrolü yapın, yatınızı seçin, tarih ve rota belirleyin. Anında onay. Mavi Yolculuk Gezisi ile güvenli rezervasyon.",
   keywords: [
-    "book yacht charter turkey",
-    "gulet availability",
-    "reserve blue cruise",
-    "yacht booking fethiye",
-    "charter boat online",
+    "türkiye yat kiralama rezervasyon",
+    "gulet müsaitlik",
+    "mavi yolculuk rezerve et",
+    "fethiye yat rezervasyon",
+    "online tekne kiralama",
   ],
   openGraph: {
-    title: "Book Your Charter | Holiday Yacht Turkey",
+    title: "Rezervasyon Yapın | Mavi Yolculuk Gezisi Türkiye",
     description:
-      "Check availability and book your dream sailing holiday in Turkey.",
+      "Müsaitlik kontrolü yapın ve Türkiye'de hayalinizdeki yelken tatilini rezerve edin.",
     images: ["/assets/images/og-image.jpg"],
   },
 };

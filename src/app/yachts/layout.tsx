@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Luxury Gulet Fleet | Yacht Charter Turkey",
+  title: "Lüks Gulet Filosu | Türkiye Yat Kiralama",
   description:
-    "Explore our fleet of 4 premium gulets for charter in Turkey. From intimate 8-guest yachts to spacious 20-guest vessels. Air-conditioned cabins, professional crew, gourmet cuisine. Book your blue cruise today!",
+    "Türkiye'de kiralık 4 premium guletimizi keşfedin. 8 misafirlik samimi yatlardan 20 misafirlik geniş teknelere. Klimali kamaralar, profesyonel mürettebat, gurme mutfak. Mavi yolculuğunuzu bugün rezerve edin!",
   keywords: [
-    "gulet fleet turkey",
-    "yacht charter fethiye",
-    "luxury boat rental turkey",
-    "blue cruise boats",
-    "gulet hire bodrum",
-    "private yacht turkey",
+    "türkiye gulet filosu",
+    "fethiye yat kiralama",
+    "türkiye lüks tekne kiralama",
+    "mavi yolculuk tekneleri",
+    "bodrum gulet kiralama",
+    "özel yat türkiye",
   ],
   openGraph: {
-    title: "Luxury Gulet Fleet | Holiday Yacht Turkey",
+    title: "Lüks Gulet Filosu | Mavi Yolculuk Gezisi Türkiye",
     description:
-      "Explore our fleet of premium gulets for charter along Turkey's Turquoise Coast.",
+      "Türkiye'nin Turkuaz Kıyısı boyunca kiralık premium gulet filomuzu keşfedin.",
     images: ["/assets/images/yachts/holiday10/01.jpg"],
   },
 };

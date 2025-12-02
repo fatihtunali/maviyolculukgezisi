@@ -60,7 +60,7 @@ export default function BlogPostPage() {
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
-    image: `https://www.holidayyachts.com${post.image}`,
+    image: `https://www.maviyolculukgezisi.com${post.image}`,
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     author: {
@@ -69,15 +69,15 @@ export default function BlogPostPage() {
     },
     publisher: {
       "@type": "Organization",
-      name: "Holiday Yacht",
+      name: "Mavi Yolculuk Gezisi",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.holidayyachts.com/assets/images/logo.png",
+        url: "https://www.maviyolculukgezisi.com/assets/images/logo/logo-main.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.holidayyachts.com/blog/${post.slug}`,
+      "@id": `https://www.maviyolculukgezisi.com/blog/${post.slug}`,
     },
   };
 
@@ -90,9 +90,9 @@ export default function BlogPostPage() {
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.holidayyachts.com" },
-          { name: "Blog", url: "https://www.holidayyachts.com/blog" },
-          { name: post.title, url: `https://www.holidayyachts.com/blog/${post.slug}` },
+          { name: "Home", url: "https://www.maviyolculukgezisi.com" },
+          { name: "Blog", url: "https://www.maviyolculukgezisi.com/blog" },
+          { name: post.title, url: `https://www.maviyolculukgezisi.com/blog/${post.slug}` },
         ]}
       />
 
@@ -187,7 +187,7 @@ export default function BlogPostPage() {
               {/* Share */}
               <div className="mt-8">
                 <SocialShare
-                  url={`https://www.holidayyachts.com/blog/${post.slug}`}
+                  url={`https://www.maviyolculukgezisi.com/blog/${post.slug}`}
                   title={post.title}
                   description={post.excerpt}
                 />

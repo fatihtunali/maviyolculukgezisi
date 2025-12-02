@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Anchor,
   Phone,
   Mail,
   MapPin,
@@ -54,13 +53,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
-                <Anchor className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h2 className="text-xl font-bold">Holiday Yacht</h2>
-                <p className="text-xs text-slate-400">Luxury Gulet Charters</p>
+            <Link href="/" className="block">
+              <div className="relative h-16 w-44">
+                <Image
+                  src="/assets/images/logo/logo-header.png"
+                  alt="Mavi Yolculuk Gezisi"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
@@ -160,11 +160,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@holidayyachts.com"
+                  href="mailto:info@maviyolculukgezisi.com"
                   className="flex items-center gap-3 text-slate-400 hover:text-amber-400 transition-colors"
                 >
                   <Mail className="h-5 w-5 flex-shrink-0" />
-                  <span className="text-sm">info@holidayyachts.com</span>
+                  <span className="text-sm">info@maviyolculukgezisi.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-slate-400">
@@ -204,7 +204,7 @@ export function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm">
-              &copy; {new Date().getFullYear()} Holiday Yacht. {t("footer.rights")}
+              &copy; {new Date().getFullYear()} Mavi Yolculuk Gezisi. {t("footer.rights")}
             </p>
             <div className="flex items-center gap-6 text-sm">
               <span className="text-slate-600">

@@ -5,7 +5,7 @@ import { getAllDestinations } from "@/data/destinations";
 import { getAllBlogPosts } from "@/data/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.holidayyachts.com";
+  const baseUrl = "https://www.maviyolculukgezisi.com";
 
   // Get all yachts
   const yachts = getAllYachts();

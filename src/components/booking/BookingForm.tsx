@@ -101,7 +101,7 @@ export function BookingForm({
 
     // Check 2: Form submitted too quickly
     if (timeElapsed < MIN_SUBMIT_TIME) {
-      showToast("Please take your time filling out the form.", "warning");
+      showToast("Lütfen formu doldurmak için zaman ayırın.", "warning");
       setIsSubmitting(false);
       return;
     }
