@@ -7,36 +7,41 @@ export const yachts: Yacht[] = [
     slug: "ms-holiday-10",
     name: "M/S Holiday 10",
     type: "gulet",
-    length: 32,
-    beam: 7.5,
-    cabins: 6,
-    guests: 12,
-    crew: 4,
-    year: 2018,
-    renovated: 2023,
-    description: `M/S Holiday 10, geleneksel Türk işçiliği ile modern konforu mükemmel bir şekilde harmanlayan lüks bir 32 metrelik gulettir. 6 zarif kamarası ile muhteşem Türkiye kıyıları boyunca unutulmaz bir mavi yolculuk deneyimi için 12 misafire kadar rahatça ev sahipliği yapar.
+    length: 39,
+    beam: 8.1,
+    cabins: 10,
+    guests: 22,
+    crew: 5,
+    year: 2005,
+    renovated: 2017,
+    engine: "2x MAN 500 HP",
+    cruisingSpeed: "10-12 knots",
+    fuelCapacity: 6000,
+    waterCapacity: 5000,
+    generator: "2x Generators",
+    description: `M/S Holiday 10, geleneksel Türk işçiliği ile modern konforu mükemmel bir şekilde harmanlayan lüks bir 39 metrelik gulettir. 10 zarif kamarası ile muhteşem Türkiye kıyıları boyunca unutulmaz bir mavi yolculuk deneyimi için 22 misafire kadar rahatça ev sahipliği yapar.
 
-2018 yılında inşa edilmiş ve 2023 yılında yenilenmiş olan Holiday 10, geniş güneşlenme güverteleri, şık bir salon ve dünya standartlarında olanaklar sunar. 4 kişilik deneyimli mürettebatı, gurme Akdeniz mutfağından kişiselleştirilmiş gezilere kadar yolculuğunuz boyunca kusursuz hizmet sağlar.
+2005 yılında inşa edilmiş ve 2017 yılında yenilenmiş olan Holiday 10, geniş güneşlenme güverteleri, şık bir salon ve dünya standartlarında olanaklar sunar. 5-6 kişilik deneyimli mürettebatı, gurme Akdeniz mutfağından kişiselleştirilmiş gezilere kadar yolculuğunuz boyunca kusursuz hizmet sağlar.
 
 İster romantik bir kaçamak, ister aile macerası, ister özel bir grup kiralama arıyor olun, M/S Holiday 10 Ege ve Akdeniz'in nefes kesici manzaraları eşliğinde olağanüstü bir yelken deneyimi sunar.`,
-    shortDescription: "6 kamaralı 32m lüks gulet, 12 kişiye kadar gruplar için mükemmel mavi yolculuk deneyimi.",
+    shortDescription: "10 kamaralı 39m lüks gulet, 22 kişiye kadar gruplar için mükemmel mavi yolculuk deneyimi.",
     translations: {
       tr: {
-        description: `M/S Holiday 10, geleneksel Türk işçiliği ile modern konforu mükemmel bir şekilde harmanlayan lüks bir 32 metrelik gulettir. 6 zarif kamarası ile muhteşem Türkiye kıyıları boyunca unutulmaz bir mavi yolculuk deneyimi için 12 misafire kadar rahatça ev sahipliği yapar.
+        description: `M/S Holiday 10, geleneksel Türk işçiliği ile modern konforu mükemmel bir şekilde harmanlayan lüks bir 39 metrelik gulettir. 10 zarif kamarası ile muhteşem Türkiye kıyıları boyunca unutulmaz bir mavi yolculuk deneyimi için 22 misafire kadar rahatça ev sahipliği yapar.
 
-2018 yılında inşa edilmiş ve 2023 yılında yenilenmiş olan Holiday 10, geniş güneşlenme güverteleri, şık bir salon ve dünya standartlarında olanaklar sunar. 4 kişilik deneyimli mürettebatı, gurme Akdeniz mutfağından kişiselleştirilmiş gezilere kadar yolculuğunuz boyunca kusursuz hizmet sağlar.
+2005 yılında inşa edilmiş ve 2017 yılında yenilenmiş olan Holiday 10, geniş güneşlenme güverteleri, şık bir salon ve dünya standartlarında olanaklar sunar. 5-6 kişilik deneyimli mürettebatı, gurme Akdeniz mutfağından kişiselleştirilmiş gezilere kadar yolculuğunuz boyunca kusursuz hizmet sağlar.
 
 İster romantik bir kaçamak, ister aile macerası, ister özel bir grup kiralama arıyor olun, M/S Holiday 10 Ege ve Akdeniz'in nefes kesici manzaraları eşliğinde olağanüstü bir yelken deneyimi sunar.`,
-        shortDescription: "6 kamaralı 32m lüks gulet, 12 kişiye kadar gruplar için mükemmel mavi yolculuk deneyimi.",
+        shortDescription: "10 kamaralı 39m lüks gulet, 22 kişiye kadar gruplar için mükemmel mavi yolculuk deneyimi.",
       },
     },
     features: [
-      { icon: "ruler", label: "Uzunluk", value: "32m" },
-      { icon: "users", label: "Misafir", value: "12" },
-      { icon: "bed", label: "Kabin", value: "6" },
-      { icon: "users-cog", label: "Mürettebat", value: "4" },
-      { icon: "calendar", label: "Yapım Yılı", value: "2018" },
-      { icon: "wrench", label: "Yenilenme", value: "2023" },
+      { icon: "ruler", label: "Uzunluk", value: "39m" },
+      { icon: "users", label: "Misafir", value: "22" },
+      { icon: "bed", label: "Kabin", value: "10" },
+      { icon: "users-cog", label: "Mürettebat", value: "5-6" },
+      { icon: "calendar", label: "Yapım Yılı", value: "2005" },
+      { icon: "wrench", label: "Yenilenme", value: "2017" },
     ],
     amenities: [
       "Klima",
@@ -100,8 +105,11 @@ export const yachts: Yacht[] = [
     cabins: 10,
     guests: 20,
     crew: 4,
-    year: 2020,
+    year: 1995,
     renovated: 2025,
+    engine: "2x 250 HP",
+    fuelCapacity: 3000,
+    waterCapacity: 4000,
     description: `M/S Holiday 5, Mavi Yolculuk Gezisi filosunun amiral gemisi olan etkileyici 31 metrelik bir motor yelkenlidir. 10 geniş kamarası (8 çift kişilik ve 2 twin) ile 20 misafire kadar ev sahipliği yaparak büyük gruplar, aile buluşmaları ve kurumsal etkinlikler için idealdir.
 
 2025 yılında tamamen yenilenmiş olan Holiday 5, modern iç mekanlar, çoklu yemek ve dinlenme alanlarına sahip geniş güverte alanları ve kano ve kürek tahtaları dahil kapsamlı su oyuncakları sunar. 4 kişilik profesyonel mürettebatı olağanüstü hizmet ve otantik Türk misafirperverliği sunar.
@@ -123,7 +131,7 @@ Cömert alanın zarif konforla buluştuğu muhteşem Turkuaz Kıyısı boyunca M
       { icon: "users", label: "Misafir", value: "20" },
       { icon: "bed", label: "Kabin", value: "10" },
       { icon: "users-cog", label: "Mürettebat", value: "4" },
-      { icon: "calendar", label: "Yapım Yılı", value: "2020" },
+      { icon: "calendar", label: "Yapım Yılı", value: "1995" },
       { icon: "wrench", label: "Yenilenme", value: "2025" },
     ],
     amenities: [
@@ -242,52 +250,44 @@ Modern lüksün zamansız denizcilik geleneğiyle buluştuğu M/S Holiday 6'da T
     slug: "ms-holiday-m",
     name: "M/S Holiday M",
     type: "gulet",
-    length: 26,
-    beam: 6.5,
-    cabins: 4,
-    guests: 8,
-    crew: 3,
-    year: 2017,
-    renovated: 2024,
-    description: `M/S Holiday M, geleneksel cazibe ile modern inceliği birleştiren zarif bir 26 metrelik gulettir. 2024 yılında yeni yenilenmiş olup, her biri konfor ve mahremiyet düşünülerek tasarlanmış 4 geniş kamarada 8 misafire kadar ev sahipliği yapar.
+    length: 15,
+    beam: 5,
+    cabins: 3,
+    guests: 12,
+    crew: 2,
+    year: 2011,
+    renovated: 2014,
+    description: `M/S Holiday M, geleneksel cazibe ile modern inceliği birleştiren zarif bir 15 metrelik gulettir. 2014 yılında yenilenmiş olup, her biri konfor ve mahremiyet düşünülerek tasarlanmış 3 kamarada 12 misafire kadar ev sahipliği yapar.
 
-Holiday M, el işi ahşap kaplamalardan premium yatak takımlarına ve tasarımcı banyo armatürlerine kadar detaylara olağanüstü dikkat ile öne çıkar. 3 kişilik profesyonel mürettebatı eşsiz bir kiralama deneyimi sunmaktan gurur duyar.
+Holiday M, günlük turlar için ideal bir tekne olup, el işi ahşap kaplamalardan modern donanımlara kadar detaylara özen gösterilmiştir. 2 kişilik profesyonel mürettebatı eşsiz bir kiralama deneyimi sunmaktan gurur duyar.
 
-M/S Holiday M ile yelken açın ve macera ile lüksün mükemmel dengesini arayan seçici gezginler arasında neden favori olduğunu keşfedin.`,
-    shortDescription: "4 kamaralı zarif 26m gulet, nihai konfor için 2024 yılında yeni yenilenmiş.",
+M/S Holiday M ile yelken açın ve günlük mavi yolculuk turları için mükemmel bir seçim yapın.`,
+    shortDescription: "3 kamaralı zarif 15m gulet, günlük turlar için 12 kişiye kadar ideal.",
     translations: {
       tr: {
-        description: `M/S Holiday M, geleneksel cazibe ile modern inceliği birleştiren zarif bir 26 metrelik gulettir. 2024 yılında yeni yenilenmiş olup, her biri konfor ve mahremiyet düşünülerek tasarlanmış 4 geniş kamarada 8 misafire kadar ev sahipliği yapar.
+        description: `M/S Holiday M, geleneksel cazibe ile modern inceliği birleştiren zarif bir 15 metrelik gulettir. 2014 yılında yenilenmiş olup, her biri konfor ve mahremiyet düşünülerek tasarlanmış 3 kamarada 12 misafire kadar ev sahipliği yapar.
 
-Holiday M, el işi ahşap kaplamalardan premium yatak takımlarına ve tasarımcı banyo armatürlerine kadar detaylara olağanüstü dikkat ile öne çıkar. 3 kişilik profesyonel mürettebatı eşsiz bir kiralama deneyimi sunmaktan gurur duyar.
+Holiday M, günlük turlar için ideal bir tekne olup, el işi ahşap kaplamalardan modern donanımlara kadar detaylara özen gösterilmiştir. 2 kişilik profesyonel mürettebatı eşsiz bir kiralama deneyimi sunmaktan gurur duyar.
 
-M/S Holiday M ile yelken açın ve macera ile lüksün mükemmel dengesini arayan seçici gezginler arasında neden favori olduğunu keşfedin.`,
-        shortDescription: "4 kamaralı zarif 26m gulet, nihai konfor için 2024 yılında yeni yenilenmiş.",
+M/S Holiday M ile yelken açın ve günlük mavi yolculuk turları için mükemmel bir seçim yapın.`,
+        shortDescription: "3 kamaralı zarif 15m gulet, günlük turlar için 12 kişiye kadar ideal.",
       },
     },
     features: [
-      { icon: "ruler", label: "Uzunluk", value: "26m" },
-      { icon: "users", label: "Misafir", value: "8" },
-      { icon: "bed", label: "Kabin", value: "4" },
-      { icon: "users-cog", label: "Mürettebat", value: "3" },
-      { icon: "calendar", label: "Yapım Yılı", value: "2017" },
-      { icon: "wrench", label: "Yenilenme", value: "2024" },
+      { icon: "ruler", label: "Uzunluk", value: "15m" },
+      { icon: "users", label: "Misafir", value: "12" },
+      { icon: "bed", label: "Kabin", value: "3" },
+      { icon: "users-cog", label: "Mürettebat", value: "2" },
+      { icon: "calendar", label: "Yapım Yılı", value: "2011" },
+      { icon: "wrench", label: "Yenilenme", value: "2014" },
     ],
     amenities: [
-      "Klima",
-      "Jeneratör",
-      "WiFi",
-      "Akıllı TV",
-      "Premium Ses Sistemi",
-      "Su Yapıcı",
-      "Şnorkel Ekipmanı",
-      "Balıkçılık Ekipmanı",
-      "Kano",
-      "Kürek Sörfü",
       "Güneşlenme Minderleri",
       "Güverte Duşu",
       "Barbekü",
-      "Espresso Makinesi",
+      "Şnorkel Ekipmanı",
+      "Ses Sistemi",
+      "Tuvalet",
     ],
     images: [
       { id: "hm-1", src: "/assets/images/yachts/holidayM/01.webp", alt: "M/S Holiday M Dış Görünüm", category: "exterior" },
@@ -298,11 +298,13 @@ M/S Holiday M ile yelken açın ve macera ile lüksün mükemmel dengesini araya
       { id: "hm-6", src: "/assets/images/yachts/holidayM/09.jpg", alt: "M/S Holiday M Salon", category: "interior" },
     ],
     thumbnail: "/assets/images/yachts/holidayM/01.webp",
-    pricePerWeek: {
-      low: 10000,
-      mid: 13000,
-      high: 17000,
+    pricePerDay: {
+      aprilMay: 400,
+      juneSeptember: 500,
+      julyAugust: 600,
+      october: 400,
     },
+    minDays: 1,
     currency: "EUR",
     available: true,
   },
